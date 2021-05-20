@@ -57,14 +57,14 @@ extents = Vector2( 180.202, 14.7357 )
 
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
-"frames": [ ExtResource( 33 ), ExtResource( 34 ), ExtResource( 37 ), ExtResource( 33 ) ],
-"loop": true,
-"name": "Attack",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 32 ), ExtResource( 36 ), ExtResource( 38 ), ExtResource( 35 ) ],
 "loop": true,
 "name": "Walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 33 ), ExtResource( 34 ), ExtResource( 37 ), ExtResource( 33 ) ],
+"loop": true,
+"name": "Attack",
 "speed": 5.0
 } ]
 
@@ -1164,7 +1164,8 @@ limit_bottom = 0
 stream = ExtResource( 39 )
 volume_db = -16.0
 autoplay = true
-[connection signal="body_entered" from="enemigo/Area2DB" to="enemigo" method="_on_Area2DB_body_entered"]
+
+[connection signal="area_entered" from="enemigo/Area2DB" to="enemigo" method="_on_Area2DB_area_entered"]
 [connection signal="body_entered" from="enemigo/Area2DPl" to="enemigo" method="_on_Area2DPl_body_entered"]
 [connection signal="body_exited" from="enemigo/Area2DPl" to="enemigo" method="_on_Area2DPl_body_exited"]
 [connection signal="body_entered" from="enemigo/AttackDetector" to="enemigo" method="_on_AttackDetector_body_entered"]
