@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://moneda.png" type="Texture" id=1]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="monedas" type="Sprite" parent="."]
+position = Vector2( 491.776, 33.8541 )
+scale = Vector2( 0.0587251, 0.0587251 )
+texture = ExtResource( 1 )
