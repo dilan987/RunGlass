@@ -2,9 +2,11 @@ extends Node2D
 
 var vidasjugador= 3
 var monedas = 1
+var score = 0
 var ofset_vidas =80
 export (PackedScene) var sprite_vidas
 export (PackedScene) var sprite_monedas
+onready var scoreLabText = get_node("GUI/RichTextLabel")
 onready var animacion_moneda = $moneda/animacionmoneda
 onready var animacion_moneda2 = $moneda2/animacionmoneda
 onready var animacion_moneda3 = $moneda3/animacionmoneda
@@ -67,8 +69,13 @@ func crearvidas():
 func crearmonedas():
 	for l in monedas:
 		var moneda = sprite_monedas.instance()
-		get_tree().get_nodes_in_group("gui")[0].add_child(moneda) 		
-		
-		
+		get_tree().get_nodes_in_group("gui")[0].add_child(moneda) 	
 	
-
+	
+	
+func _on_moneda_coin_collected():
+	score = score + 1
+	var scoreText = "Score: " + String(score)
+	print(scoreText)
+	scoreLabText.clear()
+	scoreLabText.add_text(scoreText)

@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var direccion = Vector2()
 var velocidad = 280
-var JumpForce = -500
+var JumpForce = -350
 var gravedad = 14
 var direccion_arriba = Vector2(0,-1)
 onready var sprite = $AnimatedSprite

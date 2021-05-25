@@ -1,4 +1,4 @@
-[gd_scene load_steps=84 format=2]
+[gd_scene load_steps=85 format=2]
 
 [ext_resource path="res://Run3.png" type="Texture" id=1]
 [ext_resource path="res://Glass.gd" type="Script" id=2]
@@ -41,6 +41,7 @@
 [ext_resource path="res://musica-de-fondo.ogg" type="AudioStream" id=39]
 [ext_resource path="res://Pause.tscn" type="PackedScene" id=40]
 [ext_resource path="res://Pocion Verde.tscn" type="PackedScene" id=41]
+[ext_resource path="res://moneda.gd" type="Script" id=42]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 42.8368, 409.085 )
@@ -1252,10 +1253,21 @@ position = Vector2( 172.23, 596.06 )
 "gui",
 ]]
 
+[node name="RichTextLabel" type="RichTextLabel" parent="GUI"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -79.0
+margin_right = 79.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="moneda" type="Area2D" parent="." groups=[
 "monedas",
 ]]
 position = Vector2( 2400.5, 379.216 )
+script = ExtResource( 42 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -1693,3 +1705,5 @@ scale = Vector2( 0.4, 0.4 )
 [connection signal="body_entered" from="enemigo2/Area2DPl" to="enemigo2" method="_on_Area2DPl_body_entered"]
 [connection signal="body_exited" from="enemigo2/Area2DPl" to="enemigo2" method="_on_Area2DPl_body_exited"]
 [connection signal="body_entered" from="enemigo2/AttackDetector" to="enemigo2" method="_on_AttackDetector_body_entered"]
+[connection signal="body_entered" from="moneda" to="moneda" method="_on_moneda_body_entered"]
+[connection signal="coin_collected" from="moneda" to="." method="_on_moneda_coin_collected"]
