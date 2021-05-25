@@ -1,4 +1,4 @@
-[gd_scene load_steps=83 format=2]
+[gd_scene load_steps=84 format=2]
 
 [ext_resource path="res://Run3.png" type="Texture" id=1]
 [ext_resource path="res://Glass.gd" type="Script" id=2]
@@ -40,6 +40,7 @@
 [ext_resource path="res://Enemigo/Walk3.png" type="Texture" id=38]
 [ext_resource path="res://musica-de-fondo.ogg" type="AudioStream" id=39]
 [ext_resource path="res://Pause.tscn" type="PackedScene" id=40]
+[ext_resource path="res://Pocion Verde.tscn" type="PackedScene" id=41]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 42.8368, 409.085 )
@@ -1667,6 +1668,10 @@ volume_db = -16.0
 autoplay = true
 
 [node name="CanvasLayer2" parent="." instance=ExtResource( 40 )]
+
+[node name="Pocion Verde" parent="." instance=ExtResource( 41 )]
+position = Vector2( 1604.59, 392.652 )
+scale = Vector2( 0.4, 0.4 )
 
 [connection signal="area_entered" from="enemigo/Area2DB" to="enemigo" method="_on_Area2DB_area_entered"]
 [connection signal="body_entered" from="enemigo/Area2DPl" to="enemigo" method="_on_Area2DPl_body_entered"]
