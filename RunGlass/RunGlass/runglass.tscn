@@ -1,4 +1,4 @@
-[gd_scene load_steps=86 format=2]
+[gd_scene load_steps=87 format=2]
 
 [ext_resource path="res://Run3.png" type="Texture" id=1]
 [ext_resource path="res://Glass.gd" type="Script" id=2]
@@ -42,6 +42,7 @@
 [ext_resource path="res://Pause.tscn" type="PackedScene" id=40]
 [ext_resource path="res://Pocion Verde.tscn" type="PackedScene" id=41]
 [ext_resource path="res://moneda.gd" type="Script" id=42]
+[ext_resource path="res://pared1.1.png" type="Texture" id=43]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 42.8368, 409.085 )
@@ -461,7 +462,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 0 ]
 }
 
-[sub_resource type="Animation" id=43]
+[sub_resource type="Animation" id=24]
 length = 6.0
 loop = true
 tracks/0/type = "value"
@@ -477,7 +478,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 0 ]
 }
 
-[sub_resource type="Animation" id=44]
+[sub_resource type="Animation" id=25]
 length = 6.0
 loop = true
 tracks/0/type = "value"
@@ -493,7 +494,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 0 ]
 }
 
-[sub_resource type="Animation" id=45]
+[sub_resource type="Animation" id=26]
 length = 6.0
 loop = true
 tracks/0/type = "value"
@@ -509,7 +510,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 0 ]
 }
 
-[sub_resource type="Animation" id=46]
+[sub_resource type="Animation" id=27]
 length = 6.0
 loop = true
 tracks/0/type = "value"
@@ -525,7 +526,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 0 ]
 }
 
-[sub_resource type="Animation" id=47]
+[sub_resource type="Animation" id=28]
 length = 6.0
 loop = true
 tracks/0/type = "value"
@@ -541,7 +542,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 0 ]
 }
 
-[sub_resource type="Animation" id=48]
+[sub_resource type="Animation" id=29]
 length = 6.0
 loop = true
 tracks/0/type = "value"
@@ -557,7 +558,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 0 ]
 }
 
-[sub_resource type="Animation" id=49]
+[sub_resource type="Animation" id=30]
 length = 6.0
 loop = true
 tracks/0/type = "value"
@@ -573,7 +574,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 0 ]
 }
 
-[sub_resource type="Animation" id=50]
+[sub_resource type="Animation" id=31]
 length = 6.0
 loop = true
 tracks/0/type = "value"
@@ -589,7 +590,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 0 ]
 }
 
-[sub_resource type="Animation" id=51]
+[sub_resource type="Animation" id=32]
 length = 6.0
 loop = true
 tracks/0/type = "value"
@@ -605,7 +606,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 0 ]
 }
 
-[sub_resource type="Animation" id=54]
+[sub_resource type="Animation" id=33]
 length = 6.0
 loop = true
 tracks/0/type = "value"
@@ -621,7 +622,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 0 ]
 }
 
-[sub_resource type="Animation" id=55]
+[sub_resource type="Animation" id=34]
 length = 6.0
 loop = true
 tracks/0/type = "value"
@@ -637,7 +638,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 0 ]
 }
 
-[sub_resource type="Animation" id=56]
+[sub_resource type="Animation" id=35]
 length = 6.0
 loop = true
 tracks/0/type = "value"
@@ -653,7 +654,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 0 ]
 }
 
-[sub_resource type="Animation" id=52]
+[sub_resource type="Animation" id=36]
 length = 6.0
 loop = true
 tracks/0/type = "value"
@@ -669,7 +670,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 0 ]
 }
 
-[sub_resource type="Animation" id=53]
+[sub_resource type="Animation" id=37]
 length = 6.0
 loop = true
 tracks/0/type = "value"
@@ -685,13 +686,13 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 0 ]
 }
 
-[sub_resource type="RectangleShape2D" id=26]
+[sub_resource type="RectangleShape2D" id=38]
 extents = Vector2( 7409.27, 10 )
 
-[sub_resource type="RectangleShape2D" id=27]
+[sub_resource type="RectangleShape2D" id=39]
 extents = Vector2( 115.672, 671.794 )
 
-[sub_resource type="SpriteFrames" id=39]
+[sub_resource type="SpriteFrames" id=40]
 animations = [ {
 "frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 1 ), ExtResource( 8 ), ExtResource( 5 ) ],
 "loop": true,
@@ -704,7 +705,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="Animation" id=40]
+[sub_resource type="Animation" id=41]
 length = 5.0
 loop = true
 tracks/0/type = "value"
@@ -720,7 +721,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 0 ]
 }
 
-[sub_resource type="Animation" id=41]
+[sub_resource type="Animation" id=42]
 length = 6.0
 loop = true
 tracks/0/type = "value"
@@ -736,7 +737,7 @@ tracks/0/keys = {
 "values": [ 1, 2, 3, 4, 0 ]
 }
 
-[sub_resource type="RectangleShape2D" id=42]
+[sub_resource type="RectangleShape2D" id=43]
 extents = Vector2( 140.932, 264.277 )
 
 [node name="main" type="Node2D"]
@@ -744,15 +745,17 @@ script = ExtResource( 18 )
 sprite_vidas = ExtResource( 19 )
 sprite_monedas = ExtResource( 20 )
 
-[node name="pared2" type="Sprite" parent="."]
-position = Vector2( 4713.03, 338.411 )
-scale = Vector2( 0.38015, 0.787367 )
-texture = ExtResource( 31 )
-
 [node name="pared3" type="Sprite" parent="."]
-position = Vector2( 5648.76, 338.411 )
-scale = Vector2( 1.77337, 0.787367 )
+position = Vector2( 3606.43, 279.928 )
+scale = Vector2( 0.727038, 0.787367 )
 texture = ExtResource( 31 )
+offset = Vector2( 1115.86, 74.6962 )
+
+[node name="pared4" type="Sprite" parent="."]
+position = Vector2( 5338, 279.928 )
+scale = Vector2( 1.04445, 0.787367 )
+texture = ExtResource( 43 )
+offset = Vector2( 1115.86, 74.6962 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -1319,7 +1322,7 @@ shape = SubResource( 22 )
 
 [node name="animacionmoneda" type="AnimationPlayer" parent="moneda15"]
 playback_speed = 9.0
-anims/movimiento = SubResource( 43 )
+anims/movimiento = SubResource( 24 )
 
 [node name="moneda16" type="Area2D" parent="." groups=[
 "monedas",
@@ -1340,7 +1343,7 @@ shape = SubResource( 22 )
 
 [node name="animacionmoneda" type="AnimationPlayer" parent="moneda16"]
 playback_speed = 9.0
-anims/movimiento = SubResource( 44 )
+anims/movimiento = SubResource( 25 )
 
 [node name="moneda17" type="Area2D" parent="." groups=[
 "monedas",
@@ -1361,7 +1364,7 @@ shape = SubResource( 22 )
 
 [node name="animacionmoneda" type="AnimationPlayer" parent="moneda17"]
 playback_speed = 9.0
-anims/movimiento = SubResource( 45 )
+anims/movimiento = SubResource( 26 )
 
 [node name="moneda18" type="Area2D" parent="." groups=[
 "monedas",
@@ -1382,7 +1385,7 @@ shape = SubResource( 22 )
 
 [node name="animacionmoneda" type="AnimationPlayer" parent="moneda18"]
 playback_speed = 9.0
-anims/movimiento = SubResource( 46 )
+anims/movimiento = SubResource( 27 )
 
 [node name="moneda19" type="Area2D" parent="." groups=[
 "monedas",
@@ -1403,7 +1406,7 @@ shape = SubResource( 22 )
 
 [node name="animacionmoneda" type="AnimationPlayer" parent="moneda19"]
 playback_speed = 9.0
-anims/movimiento = SubResource( 47 )
+anims/movimiento = SubResource( 28 )
 
 [node name="moneda20" type="Area2D" parent="." groups=[
 "monedas",
@@ -1424,7 +1427,7 @@ shape = SubResource( 22 )
 
 [node name="animacionmoneda" type="AnimationPlayer" parent="moneda20"]
 playback_speed = 9.0
-anims/movimiento = SubResource( 48 )
+anims/movimiento = SubResource( 29 )
 
 [node name="moneda21" type="Area2D" parent="." groups=[
 "monedas",
@@ -1445,7 +1448,7 @@ shape = SubResource( 22 )
 
 [node name="animacionmoneda" type="AnimationPlayer" parent="moneda21"]
 playback_speed = 9.0
-anims/movimiento = SubResource( 49 )
+anims/movimiento = SubResource( 30 )
 
 [node name="moneda22" type="Area2D" parent="." groups=[
 "monedas",
@@ -1466,7 +1469,7 @@ shape = SubResource( 22 )
 
 [node name="animacionmoneda" type="AnimationPlayer" parent="moneda22"]
 playback_speed = 9.0
-anims/movimiento = SubResource( 50 )
+anims/movimiento = SubResource( 31 )
 
 [node name="moneda23" type="Area2D" parent="." groups=[
 "monedas",
@@ -1487,7 +1490,7 @@ shape = SubResource( 22 )
 
 [node name="animacionmoneda" type="AnimationPlayer" parent="moneda23"]
 playback_speed = 9.0
-anims/movimiento = SubResource( 51 )
+anims/movimiento = SubResource( 32 )
 
 [node name="moneda24" type="Area2D" parent="." groups=[
 "monedas",
@@ -1508,7 +1511,7 @@ shape = SubResource( 22 )
 
 [node name="animacionmoneda" type="AnimationPlayer" parent="moneda24"]
 playback_speed = 9.0
-anims/movimiento = SubResource( 54 )
+anims/movimiento = SubResource( 33 )
 
 [node name="moneda25" type="Area2D" parent="." groups=[
 "monedas",
@@ -1529,7 +1532,7 @@ shape = SubResource( 22 )
 
 [node name="animacionmoneda" type="AnimationPlayer" parent="moneda25"]
 playback_speed = 9.0
-anims/movimiento = SubResource( 55 )
+anims/movimiento = SubResource( 34 )
 
 [node name="moneda26" type="Area2D" parent="." groups=[
 "monedas",
@@ -1550,7 +1553,7 @@ shape = SubResource( 22 )
 
 [node name="animacionmoneda" type="AnimationPlayer" parent="moneda26"]
 playback_speed = 9.0
-anims/movimiento = SubResource( 56 )
+anims/movimiento = SubResource( 35 )
 
 [node name="moneda3" type="Area2D" parent="." groups=[
 "monedas",
@@ -1571,7 +1574,7 @@ shape = SubResource( 22 )
 
 [node name="animacionmoneda" type="AnimationPlayer" parent="moneda3"]
 playback_speed = 9.0
-anims/movimiento = SubResource( 52 )
+anims/movimiento = SubResource( 36 )
 
 [node name="moneda2" type="Area2D" parent="." groups=[
 "monedas",
@@ -1592,7 +1595,7 @@ shape = SubResource( 22 )
 
 [node name="animacionmoneda" type="AnimationPlayer" parent="moneda2"]
 playback_speed = 9.0
-anims/movimiento = SubResource( 53 )
+anims/movimiento = SubResource( 37 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 1407.28, 28.644 )
@@ -1603,7 +1606,7 @@ texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 5424.74, 0 )
-shape = SubResource( 26 )
+shape = SubResource( 38 )
 
 [node name="techo2" type="Sprite" parent="."]
 position = Vector2( 3234.17, 28.9143 )
@@ -1662,7 +1665,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-shape = SubResource( 27 )
+shape = SubResource( 39 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
 position = Vector2( 9449.15, 390.986 )
@@ -1688,21 +1691,21 @@ script = ExtResource( 2 )
 ]]
 position = Vector2( -5, 0 )
 scale = Vector2( 1.16539, 1.16539 )
-frames = SubResource( 39 )
+frames = SubResource( 40 )
 animation = "moverse"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Glass" groups=[
 "heroe",
 ]]
 playback_speed = 9.0
-anims/correr = SubResource( 40 )
-anims/saltar = SubResource( 41 )
+anims/correr = SubResource( 41 )
+anims/saltar = SubResource( 42 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Glass" groups=[
 "heroe",
 ]]
 position = Vector2( 1, 81 )
-shape = SubResource( 42 )
+shape = SubResource( 43 )
 
 [node name="Camera2D" type="Camera2D" parent="Glass" groups=[
 "heroe",
