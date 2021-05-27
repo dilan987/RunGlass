@@ -10,17 +10,17 @@ onready var scoreLabText = get_node("GUI/RichTextLabel")
 onready var animacion_moneda = $moneda/animacionmoneda
 onready var animacion_moneda2 = $moneda2/animacionmoneda
 onready var animacion_moneda3 = $moneda3/animacionmoneda
-onready var animacion_moneda4 = $moneda4/animacionmoneda 
-onready var animacion_moneda5 = $moneda5/animacionmoneda
-onready var animacion_moneda6 = $moneda6/animacionmoneda
-onready var animacion_moneda7 = $moneda7/animacionmoneda
-onready var animacion_moneda8 = $moneda8/animacionmoneda
-onready var animacion_moneda9 = $moneda9/animacionmoneda
-onready var animacion_moneda10 = $moneda10/animacionmoneda
-onready var animacion_moneda11 = $moneda11/animacionmoneda
-onready var animacion_moneda12 = $moneda12/animacionmoneda
-onready var animacion_moneda13 = $moneda13/animacionmoneda
-onready var animacion_moneda14 = $moneda14/animacionmoneda
+onready var animacion_moneda16 = $moneda16/animacionmoneda 
+onready var animacion_moneda17 = $moneda17/animacionmoneda
+onready var animacion_moneda18 = $moneda18/animacionmoneda
+onready var animacion_moneda19 = $moneda19/animacionmoneda
+onready var animacion_moneda20 = $moneda20/animacionmoneda
+onready var animacion_moneda21 = $moneda21/animacionmoneda
+onready var animacion_moneda22 = $moneda22/animacionmoneda
+onready var animacion_moneda23 = $moneda23/animacionmoneda
+onready var animacion_moneda24 = $moneda24/animacionmoneda
+onready var animacion_moneda25 = $moneda25/animacionmoneda
+onready var animacion_moneda26 = $moneda26/animacionmoneda
 
 
 
@@ -41,17 +41,17 @@ func _ready():
 	animacion_moneda.play("movimiento")
 	animacion_moneda2.play("movimiento")
 	animacion_moneda3.play("movimiento")
-	animacion_moneda4.play("movimiento")
-	animacion_moneda5.play("movimiento")
-	animacion_moneda6.play("movimiento")
-	animacion_moneda7.play("movimiento")
-	animacion_moneda8.play("movimiento")
-	animacion_moneda9.play("movimiento")
-	animacion_moneda10.play("movimiento")
-	animacion_moneda11.play("movimiento")
-	animacion_moneda12.play("movimiento")
-	animacion_moneda13.play("movimiento")
-	animacion_moneda14.play("movimiento")
+	animacion_moneda16.play("movimiento")
+	animacion_moneda17.play("movimiento")
+	animacion_moneda18.play("movimiento")
+	animacion_moneda19.play("movimiento")
+	animacion_moneda20.play("movimiento")
+	animacion_moneda21.play("movimiento")
+	animacion_moneda22.play("movimiento")
+	animacion_moneda23.play("movimiento")
+	animacion_moneda24.play("movimiento")
+	animacion_moneda25.play("movimiento")
+	animacion_moneda26.play("movimiento")
 	
 	
 	
