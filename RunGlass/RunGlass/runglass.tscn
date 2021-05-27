@@ -1,4 +1,4 @@
-[gd_scene load_steps=87 format=2]
+[gd_scene load_steps=86 format=2]
 
 [ext_resource path="res://Run3.png" type="Texture" id=1]
 [ext_resource path="res://Glass.gd" type="Script" id=2]
@@ -30,7 +30,6 @@
 [ext_resource path="res://suelo2.png" type="Texture" id=28]
 [ext_resource path="res://techo3.png" type="Texture" id=29]
 [ext_resource path="res://techo2.png" type="Texture" id=30]
-[ext_resource path="res://pared1.png" type="Texture" id=31]
 [ext_resource path="res://Enemigo/Walk1.png" type="Texture" id=32]
 [ext_resource path="res://Enemigo/Attack1.png" type="Texture" id=33]
 [ext_resource path="res://Enemigo/Attack2.png" type="Texture" id=34]
@@ -745,15 +744,9 @@ script = ExtResource( 18 )
 sprite_vidas = ExtResource( 19 )
 sprite_monedas = ExtResource( 20 )
 
-[node name="pared3" type="Sprite" parent="."]
-position = Vector2( 3606.43, 279.928 )
-scale = Vector2( 0.727038, 0.787367 )
-texture = ExtResource( 31 )
-offset = Vector2( 1115.86, 74.6962 )
-
 [node name="pared4" type="Sprite" parent="."]
-position = Vector2( 5338, 279.928 )
-scale = Vector2( 1.04445, 0.787367 )
+position = Vector2( 3671.31, 279.928 )
+scale = Vector2( 1.77321, 0.787367 )
 texture = ExtResource( 43 )
 offset = Vector2( 1115.86, 74.6962 )
 
