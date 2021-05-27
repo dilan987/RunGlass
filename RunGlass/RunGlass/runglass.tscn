@@ -1,4 +1,4 @@
-[gd_scene load_steps=94 format=2]
+[gd_scene load_steps=85 format=2]
 
 [ext_resource path="res://Run3.png" type="Texture" id=1]
 [ext_resource path="res://Glass.gd" type="Script" id=2]
@@ -60,14 +60,14 @@ extents = Vector2( 180.202, 14.7357 )
 
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
-"frames": [ ExtResource( 33 ), ExtResource( 34 ), ExtResource( 37 ), ExtResource( 33 ) ],
-"loop": true,
-"name": "Attack",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 32 ), ExtResource( 36 ), ExtResource( 38 ), ExtResource( 35 ) ],
 "loop": true,
 "name": "Walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 33 ), ExtResource( 34 ), ExtResource( 37 ), ExtResource( 33 ) ],
+"loop": true,
+"name": "Attack",
 "speed": 5.0
 } ]
 
@@ -461,7 +461,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 0 ]
 }
 
-[sub_resource type="Animation" id=43]
+[sub_resource type="Animation" id=24]
 length = 6.0
 loop = true
 tracks/0/type = "value"
@@ -477,151 +477,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 0 ]
 }
 
-[sub_resource type="Animation" id=44]
-length = 6.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("AnimatedSprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 3, 4, 5, 0 ]
-}
-
-[sub_resource type="Animation" id=45]
-length = 6.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("AnimatedSprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 3, 4, 5, 0 ]
-}
-
-[sub_resource type="Animation" id=46]
-length = 6.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("AnimatedSprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 3, 4, 5, 0 ]
-}
-
-[sub_resource type="Animation" id=47]
-length = 6.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("AnimatedSprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 3, 4, 5, 0 ]
-}
-
-[sub_resource type="Animation" id=48]
-length = 6.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("AnimatedSprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 3, 4, 5, 0 ]
-}
-
-[sub_resource type="Animation" id=49]
-length = 6.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("AnimatedSprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 3, 4, 5, 0 ]
-}
-
-[sub_resource type="Animation" id=50]
-length = 6.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("AnimatedSprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 3, 4, 5, 0 ]
-}
-
-[sub_resource type="Animation" id=51]
-length = 6.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("AnimatedSprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 3, 4, 5, 0 ]
-}
-
-[sub_resource type="Animation" id=52]
-length = 6.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("AnimatedSprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 3, 4, 5, 0 ]
-}
-
-[sub_resource type="Animation" id=53]
+[sub_resource type="Animation" id=25]
 length = 6.0
 loop = true
 tracks/0/type = "value"
@@ -915,7 +771,7 @@ position = Vector2( 426.681, 50.9087 )
 shape = SubResource( 2 )
 
 [node name="suelo2" type="StaticBody2D" parent="."]
-position = Vector2( 2133.31, 683.526 )
+position = Vector2( 2135.98, 683.526 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -1428,221 +1284,10 @@ shape = SubResource( 22 )
 playback_speed = 9.0
 anims/movimiento = SubResource( 23 )
 
-[node name="moneda15" type="Area2D" parent="." groups=[
-"monedas",
-]]
-position = Vector2( 4193.86, 400.925 )
-script = ExtResource( 42 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="moneda15"]
-scale = Vector2( 0.085381, 0.085381 )
-frames = SubResource( 21 )
-animation = "movimiento"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="moneda15"]
-shape = SubResource( 22 )
-
-[node name="animacionmoneda" type="AnimationPlayer" parent="moneda15"]
-playback_speed = 9.0
-anims/movimiento = SubResource( 43 )
-
-[node name="moneda16" type="Area2D" parent="." groups=[
-"monedas",
-]]
-position = Vector2( 4297.69, 399.981 )
-script = ExtResource( 42 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="moneda16"]
-scale = Vector2( 0.085381, 0.085381 )
-frames = SubResource( 21 )
-animation = "movimiento"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="moneda16"]
-shape = SubResource( 22 )
-
-[node name="animacionmoneda" type="AnimationPlayer" parent="moneda16"]
-playback_speed = 9.0
-anims/movimiento = SubResource( 44 )
-
-[node name="moneda17" type="Area2D" parent="." groups=[
-"monedas",
-]]
-position = Vector2( 4409.06, 402.813 )
-script = ExtResource( 42 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="moneda17"]
-scale = Vector2( 0.085381, 0.085381 )
-frames = SubResource( 21 )
-animation = "movimiento"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="moneda17"]
-shape = SubResource( 22 )
-
-[node name="animacionmoneda" type="AnimationPlayer" parent="moneda17"]
-playback_speed = 9.0
-anims/movimiento = SubResource( 45 )
-
-[node name="moneda18" type="Area2D" parent="." groups=[
-"monedas",
-]]
-position = Vector2( 4600.79, 132.044 )
-script = ExtResource( 42 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="moneda18"]
-scale = Vector2( 0.085381, 0.085381 )
-frames = SubResource( 21 )
-animation = "movimiento"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="moneda18"]
-shape = SubResource( 22 )
-
-[node name="animacionmoneda" type="AnimationPlayer" parent="moneda18"]
-playback_speed = 9.0
-anims/movimiento = SubResource( 46 )
-
-[node name="moneda19" type="Area2D" parent="." groups=[
-"monedas",
-]]
-position = Vector2( 4718.51, 132.044 )
-script = ExtResource( 42 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="moneda19"]
-scale = Vector2( 0.085381, 0.085381 )
-frames = SubResource( 21 )
-animation = "movimiento"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="moneda19"]
-shape = SubResource( 22 )
-
-[node name="animacionmoneda" type="AnimationPlayer" parent="moneda19"]
-playback_speed = 9.0
-anims/movimiento = SubResource( 47 )
-
-[node name="moneda20" type="Area2D" parent="." groups=[
-"monedas",
-]]
-position = Vector2( 4839.6, 138.771 )
-script = ExtResource( 42 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="moneda20"]
-scale = Vector2( 0.085381, 0.085381 )
-frames = SubResource( 21 )
-animation = "movimiento"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="moneda20"]
-shape = SubResource( 22 )
-
-[node name="animacionmoneda" type="AnimationPlayer" parent="moneda20"]
-playback_speed = 9.0
-anims/movimiento = SubResource( 48 )
-
-[node name="moneda21" type="Area2D" parent="." groups=[
-"monedas",
-]]
-position = Vector2( 5006.1, 404.495 )
-script = ExtResource( 42 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="moneda21"]
-scale = Vector2( 0.085381, 0.085381 )
-frames = SubResource( 21 )
-animation = "movimiento"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="moneda21"]
-shape = SubResource( 22 )
-
-[node name="animacionmoneda" type="AnimationPlayer" parent="moneda21"]
-playback_speed = 9.0
-anims/movimiento = SubResource( 49 )
-
-[node name="moneda22" type="Area2D" parent="." groups=[
-"monedas",
-]]
-position = Vector2( 5128.87, 406.176 )
-script = ExtResource( 42 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="moneda22"]
-scale = Vector2( 0.085381, 0.085381 )
-frames = SubResource( 21 )
-animation = "movimiento"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="moneda22"]
-shape = SubResource( 22 )
-
-[node name="animacionmoneda" type="AnimationPlayer" parent="moneda22"]
-playback_speed = 9.0
-anims/movimiento = SubResource( 50 )
-
-[node name="moneda23" type="Area2D" parent="." groups=[
-"monedas",
-]]
-position = Vector2( 5246.6, 409.54 )
-script = ExtResource( 42 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="moneda23"]
-scale = Vector2( 0.085381, 0.085381 )
-frames = SubResource( 21 )
-animation = "movimiento"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="moneda23"]
-shape = SubResource( 22 )
-
-[node name="animacionmoneda" type="AnimationPlayer" parent="moneda23"]
-playback_speed = 9.0
-anims/movimiento = SubResource( 51 )
-
-[node name="moneda3" type="Area2D" parent="." groups=[
-"monedas",
-]]
-position = Vector2( 2312.5, 381.216 )
-script = ExtResource( 42 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="moneda3"]
-scale = Vector2( 0.085381, 0.085381 )
-frames = SubResource( 21 )
-animation = "movimiento"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="moneda3"]
-shape = SubResource( 22 )
-
-[node name="animacionmoneda" type="AnimationPlayer" parent="moneda3"]
-playback_speed = 9.0
-anims/movimiento = SubResource( 52 )
-
 [node name="moneda2" type="Area2D" parent="." groups=[
 "monedas",
 ]]
-position = Vector2( 2490.5, 381.216 )
-script = ExtResource( 42 )
+position = Vector2( 2456.5, 379.216 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -1657,7 +1302,28 @@ shape = SubResource( 22 )
 
 [node name="animacionmoneda" type="AnimationPlayer" parent="moneda2"]
 playback_speed = 9.0
-anims/movimiento = SubResource( 53 )
+anims/movimiento = SubResource( 24 )
+
+[node name="moneda3" type="Area2D" parent="." groups=[
+"monedas",
+]]
+position = Vector2( 2336.5, 379.216 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="moneda3"]
+scale = Vector2( 0.085381, 0.085381 )
+frames = SubResource( 21 )
+animation = "movimiento"
+frame = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="moneda3"]
+shape = SubResource( 22 )
+
+[node name="animacionmoneda" type="AnimationPlayer" parent="moneda3"]
+playback_speed = 9.0
+anims/movimiento = SubResource( 25 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 1407.28, 28.644 )
@@ -1732,7 +1398,6 @@ shape = SubResource( 27 )
 [node name="moneda4" type="Area2D" parent="." groups=[
 "monedas",
 ]]
-visible = false
 position = Vector2( 4275.5, 378.216 )
 __meta__ = {
 "_edit_group_": true
@@ -1754,7 +1419,6 @@ anims/movimiento = SubResource( 28 )
 [node name="moneda5" type="Area2D" parent="." groups=[
 "monedas",
 ]]
-visible = false
 position = Vector2( 4355.5, 378.216 )
 __meta__ = {
 "_edit_group_": true
@@ -1776,7 +1440,6 @@ anims/movimiento = SubResource( 29 )
 [node name="moneda9" type="Area2D" parent="." groups=[
 "monedas",
 ]]
-visible = false
 position = Vector2( 5148.5, 377.216 )
 __meta__ = {
 "_edit_group_": true
@@ -1798,7 +1461,6 @@ anims/movimiento = SubResource( 30 )
 [node name="moneda10" type="Area2D" parent="." groups=[
 "monedas",
 ]]
-visible = false
 position = Vector2( 6354.5, 377.216 )
 __meta__ = {
 "_edit_group_": true
@@ -1820,7 +1482,6 @@ anims/movimiento = SubResource( 31 )
 [node name="moneda11" type="Area2D" parent="." groups=[
 "monedas",
 ]]
-visible = false
 position = Vector2( 6428.5, 377.216 )
 __meta__ = {
 "_edit_group_": true
@@ -1842,7 +1503,6 @@ anims/movimiento = SubResource( 32 )
 [node name="moneda12" type="Area2D" parent="." groups=[
 "monedas",
 ]]
-visible = false
 position = Vector2( 7115.5, 522.216 )
 __meta__ = {
 "_edit_group_": true
@@ -1864,7 +1524,6 @@ anims/movimiento = SubResource( 33 )
 [node name="moneda13" type="Area2D" parent="." groups=[
 "monedas",
 ]]
-visible = false
 position = Vector2( 7164.5, 522.216 )
 __meta__ = {
 "_edit_group_": true
@@ -1886,7 +1545,6 @@ anims/movimiento = SubResource( 34 )
 [node name="moneda14" type="Area2D" parent="." groups=[
 "monedas",
 ]]
-visible = false
 position = Vector2( 7213.5, 522.216 )
 __meta__ = {
 "_edit_group_": true
@@ -1908,7 +1566,6 @@ anims/movimiento = SubResource( 35 )
 [node name="moneda6" type="Area2D" parent="." groups=[
 "monedas",
 ]]
-visible = false
 position = Vector2( 4657.5, 113.216 )
 __meta__ = {
 "_edit_group_": true
@@ -1930,7 +1587,6 @@ anims/movimiento = SubResource( 36 )
 [node name="moneda7" type="Area2D" parent="." groups=[
 "monedas",
 ]]
-visible = false
 position = Vector2( 4722.5, 113.216 )
 __meta__ = {
 "_edit_group_": true
@@ -1952,7 +1608,6 @@ anims/movimiento = SubResource( 37 )
 [node name="moneda8" type="Area2D" parent="." groups=[
 "monedas",
 ]]
-visible = false
 position = Vector2( 4787.5, 113.216 )
 __meta__ = {
 "_edit_group_": true
@@ -2051,25 +1706,3 @@ scale = Vector2( 0.4, 0.4 )
 [connection signal="body_entered" from="enemigo2/AttackDetector" to="enemigo2" method="_on_AttackDetector_body_entered"]
 [connection signal="body_entered" from="moneda" to="moneda" method="_on_moneda_body_entered"]
 [connection signal="coin_collected" from="moneda" to="." method="_on_moneda_coin_collected"]
-[connection signal="body_entered" from="moneda15" to="moneda15" method="_on_moneda_body_entered"]
-[connection signal="coin_collected" from="moneda15" to="." method="_on_moneda_coin_collected"]
-[connection signal="body_entered" from="moneda16" to="moneda16" method="_on_moneda_body_entered"]
-[connection signal="coin_collected" from="moneda16" to="." method="_on_moneda_coin_collected"]
-[connection signal="body_entered" from="moneda17" to="moneda17" method="_on_moneda_body_entered"]
-[connection signal="coin_collected" from="moneda17" to="." method="_on_moneda_coin_collected"]
-[connection signal="body_entered" from="moneda18" to="moneda18" method="_on_moneda_body_entered"]
-[connection signal="coin_collected" from="moneda18" to="." method="_on_moneda_coin_collected"]
-[connection signal="body_entered" from="moneda19" to="moneda19" method="_on_moneda_body_entered"]
-[connection signal="coin_collected" from="moneda19" to="." method="_on_moneda_coin_collected"]
-[connection signal="body_entered" from="moneda20" to="moneda20" method="_on_moneda_body_entered"]
-[connection signal="coin_collected" from="moneda20" to="." method="_on_moneda_coin_collected"]
-[connection signal="body_entered" from="moneda21" to="moneda21" method="_on_moneda_body_entered"]
-[connection signal="coin_collected" from="moneda21" to="." method="_on_moneda_coin_collected"]
-[connection signal="body_entered" from="moneda22" to="moneda22" method="_on_moneda_body_entered"]
-[connection signal="coin_collected" from="moneda22" to="." method="_on_moneda_coin_collected"]
-[connection signal="body_entered" from="moneda23" to="moneda23" method="_on_moneda_body_entered"]
-[connection signal="coin_collected" from="moneda23" to="." method="_on_moneda_coin_collected"]
-[connection signal="body_entered" from="moneda3" to="moneda3" method="_on_moneda_body_entered"]
-[connection signal="coin_collected" from="moneda3" to="." method="_on_moneda_coin_collected"]
-[connection signal="body_entered" from="moneda2" to="moneda2" method="_on_moneda_body_entered"]
-[connection signal="coin_collected" from="moneda2" to="." method="_on_moneda_coin_collected"]
