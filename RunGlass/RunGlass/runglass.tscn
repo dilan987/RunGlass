@@ -1,4 +1,4 @@
-[gd_scene load_steps=86 format=2]
+[gd_scene load_steps=88 format=2]
 
 [ext_resource path="res://Run3.png" type="Texture" id=1]
 [ext_resource path="res://Glass.gd" type="Script" id=2]
@@ -30,6 +30,7 @@
 [ext_resource path="res://suelo2.png" type="Texture" id=28]
 [ext_resource path="res://techo3.png" type="Texture" id=29]
 [ext_resource path="res://techo2.png" type="Texture" id=30]
+[ext_resource path="res://Font/FredokaOne-Regular.ttf" type="DynamicFontData" id=31]
 [ext_resource path="res://Enemigo/Walk1.png" type="Texture" id=32]
 [ext_resource path="res://Enemigo/Attack1.png" type="Texture" id=33]
 [ext_resource path="res://Enemigo/Attack2.png" type="Texture" id=34]
@@ -60,14 +61,14 @@ extents = Vector2( 180.202, 14.7357 )
 
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
-"frames": [ ExtResource( 33 ), ExtResource( 34 ), ExtResource( 37 ), ExtResource( 33 ) ],
-"loop": true,
-"name": "Attack",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 32 ), ExtResource( 36 ), ExtResource( 38 ), ExtResource( 35 ) ],
 "loop": true,
 "name": "Walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 33 ), ExtResource( 34 ), ExtResource( 37 ), ExtResource( 33 ) ],
+"loop": true,
+"name": "Attack",
 "speed": 5.0
 } ]
 
@@ -434,7 +435,11 @@ tracks/1/keys = {
 "values": [ 0, 1, 2, 3, 2, 0 ]
 }
 
-[sub_resource type="SpriteFrames" id=21]
+[sub_resource type="DynamicFont" id=21]
+size = 24
+font_data = ExtResource( 31 )
+
+[sub_resource type="SpriteFrames" id=22]
 animations = [ {
 "frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 26 ), ExtResource( 25 ) ],
 "loop": true,
@@ -442,24 +447,8 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="CircleShape2D" id=22]
+[sub_resource type="CircleShape2D" id=23]
 radius = 17.0227
-
-[sub_resource type="Animation" id=23]
-length = 6.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("AnimatedSprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 3, 4, 5, 0 ]
-}
 
 [sub_resource type="Animation" id=24]
 length = 6.0
@@ -685,26 +674,42 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 0 ]
 }
 
-[sub_resource type="RectangleShape2D" id=38]
-extents = Vector2( 7409.27, 10 )
+[sub_resource type="Animation" id=38]
+length = 6.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 0 ]
+}
 
 [sub_resource type="RectangleShape2D" id=39]
+extents = Vector2( 7409.27, 10 )
+
+[sub_resource type="RectangleShape2D" id=40]
 extents = Vector2( 115.672, 671.794 )
 
-[sub_resource type="SpriteFrames" id=40]
+[sub_resource type="SpriteFrames" id=41]
 animations = [ {
-"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 1 ), ExtResource( 8 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "moverse",
-"speed": 9.0
-}, {
 "frames": [ ExtResource( 13 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "saltar",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 1 ), ExtResource( 8 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "moverse",
+"speed": 9.0
 } ]
 
-[sub_resource type="Animation" id=41]
+[sub_resource type="Animation" id=42]
 length = 5.0
 loop = true
 tracks/0/type = "value"
@@ -720,7 +725,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 0 ]
 }
 
-[sub_resource type="Animation" id=42]
+[sub_resource type="Animation" id=43]
 length = 6.0
 loop = true
 tracks/0/type = "value"
@@ -736,7 +741,7 @@ tracks/0/keys = {
 "values": [ 1, 2, 3, 4, 0 ]
 }
 
-[sub_resource type="RectangleShape2D" id=43]
+[sub_resource type="RectangleShape2D" id=44]
 extents = Vector2( 140.932, 264.277 )
 
 [node name="main" type="Node2D"]
@@ -1266,11 +1271,16 @@ position = Vector2( 172.23, 596.06 )
 ]]
 
 [node name="RichTextLabel" type="RichTextLabel" parent="GUI"]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -79.0
-margin_right = 79.0
-margin_bottom = 40.0
+anchor_left = 0.37
+anchor_top = 0.022
+anchor_right = 0.37
+anchor_bottom = 0.022
+margin_left = -48.88
+margin_top = -0.200001
+margin_right = 48.12
+margin_bottom = 30.8
+custom_fonts/normal_font = SubResource( 21 )
+text = "Score: 0"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1286,15 +1296,15 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="moneda"]
 scale = Vector2( 0.085381, 0.085381 )
-frames = SubResource( 21 )
+frames = SubResource( 22 )
 animation = "movimiento"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="moneda"]
-shape = SubResource( 22 )
+shape = SubResource( 23 )
 
 [node name="animacionmoneda" type="AnimationPlayer" parent="moneda"]
 playback_speed = 9.0
-anims/movimiento = SubResource( 23 )
+anims/movimiento = SubResource( 24 )
 
 [node name="moneda15" type="Area2D" parent="." groups=[
 "monedas",
@@ -1307,15 +1317,15 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="moneda15"]
 scale = Vector2( 0.085381, 0.085381 )
-frames = SubResource( 21 )
+frames = SubResource( 22 )
 animation = "movimiento"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="moneda15"]
-shape = SubResource( 22 )
+shape = SubResource( 23 )
 
 [node name="animacionmoneda" type="AnimationPlayer" parent="moneda15"]
 playback_speed = 9.0
-anims/movimiento = SubResource( 24 )
+anims/movimiento = SubResource( 25 )
 
 [node name="moneda16" type="Area2D" parent="." groups=[
 "monedas",
@@ -1328,15 +1338,15 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="moneda16"]
 scale = Vector2( 0.085381, 0.085381 )
-frames = SubResource( 21 )
+frames = SubResource( 22 )
 animation = "movimiento"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="moneda16"]
-shape = SubResource( 22 )
+shape = SubResource( 23 )
 
 [node name="animacionmoneda" type="AnimationPlayer" parent="moneda16"]
 playback_speed = 9.0
-anims/movimiento = SubResource( 25 )
+anims/movimiento = SubResource( 26 )
 
 [node name="moneda17" type="Area2D" parent="." groups=[
 "monedas",
@@ -1349,15 +1359,15 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="moneda17"]
 scale = Vector2( 0.085381, 0.085381 )
-frames = SubResource( 21 )
+frames = SubResource( 22 )
 animation = "movimiento"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="moneda17"]
-shape = SubResource( 22 )
+shape = SubResource( 23 )
 
 [node name="animacionmoneda" type="AnimationPlayer" parent="moneda17"]
 playback_speed = 9.0
-anims/movimiento = SubResource( 26 )
+anims/movimiento = SubResource( 27 )
 
 [node name="moneda18" type="Area2D" parent="." groups=[
 "monedas",
@@ -1370,15 +1380,15 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="moneda18"]
 scale = Vector2( 0.085381, 0.085381 )
-frames = SubResource( 21 )
+frames = SubResource( 22 )
 animation = "movimiento"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="moneda18"]
-shape = SubResource( 22 )
+shape = SubResource( 23 )
 
 [node name="animacionmoneda" type="AnimationPlayer" parent="moneda18"]
 playback_speed = 9.0
-anims/movimiento = SubResource( 27 )
+anims/movimiento = SubResource( 28 )
 
 [node name="moneda19" type="Area2D" parent="." groups=[
 "monedas",
@@ -1391,15 +1401,15 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="moneda19"]
 scale = Vector2( 0.085381, 0.085381 )
-frames = SubResource( 21 )
+frames = SubResource( 22 )
 animation = "movimiento"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="moneda19"]
-shape = SubResource( 22 )
+shape = SubResource( 23 )
 
 [node name="animacionmoneda" type="AnimationPlayer" parent="moneda19"]
 playback_speed = 9.0
-anims/movimiento = SubResource( 28 )
+anims/movimiento = SubResource( 29 )
 
 [node name="moneda20" type="Area2D" parent="." groups=[
 "monedas",
@@ -1412,15 +1422,15 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="moneda20"]
 scale = Vector2( 0.085381, 0.085381 )
-frames = SubResource( 21 )
+frames = SubResource( 22 )
 animation = "movimiento"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="moneda20"]
-shape = SubResource( 22 )
+shape = SubResource( 23 )
 
 [node name="animacionmoneda" type="AnimationPlayer" parent="moneda20"]
 playback_speed = 9.0
-anims/movimiento = SubResource( 29 )
+anims/movimiento = SubResource( 30 )
 
 [node name="moneda21" type="Area2D" parent="." groups=[
 "monedas",
@@ -1433,15 +1443,15 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="moneda21"]
 scale = Vector2( 0.085381, 0.085381 )
-frames = SubResource( 21 )
+frames = SubResource( 22 )
 animation = "movimiento"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="moneda21"]
-shape = SubResource( 22 )
+shape = SubResource( 23 )
 
 [node name="animacionmoneda" type="AnimationPlayer" parent="moneda21"]
 playback_speed = 9.0
-anims/movimiento = SubResource( 30 )
+anims/movimiento = SubResource( 31 )
 
 [node name="moneda22" type="Area2D" parent="." groups=[
 "monedas",
@@ -1454,15 +1464,15 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="moneda22"]
 scale = Vector2( 0.085381, 0.085381 )
-frames = SubResource( 21 )
+frames = SubResource( 22 )
 animation = "movimiento"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="moneda22"]
-shape = SubResource( 22 )
+shape = SubResource( 23 )
 
 [node name="animacionmoneda" type="AnimationPlayer" parent="moneda22"]
 playback_speed = 9.0
-anims/movimiento = SubResource( 31 )
+anims/movimiento = SubResource( 32 )
 
 [node name="moneda23" type="Area2D" parent="." groups=[
 "monedas",
@@ -1475,15 +1485,15 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="moneda23"]
 scale = Vector2( 0.085381, 0.085381 )
-frames = SubResource( 21 )
+frames = SubResource( 22 )
 animation = "movimiento"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="moneda23"]
-shape = SubResource( 22 )
+shape = SubResource( 23 )
 
 [node name="animacionmoneda" type="AnimationPlayer" parent="moneda23"]
 playback_speed = 9.0
-anims/movimiento = SubResource( 32 )
+anims/movimiento = SubResource( 33 )
 
 [node name="moneda24" type="Area2D" parent="." groups=[
 "monedas",
@@ -1496,15 +1506,15 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="moneda24"]
 scale = Vector2( 0.085381, 0.085381 )
-frames = SubResource( 21 )
+frames = SubResource( 22 )
 animation = "movimiento"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="moneda24"]
-shape = SubResource( 22 )
+shape = SubResource( 23 )
 
 [node name="animacionmoneda" type="AnimationPlayer" parent="moneda24"]
 playback_speed = 9.0
-anims/movimiento = SubResource( 33 )
+anims/movimiento = SubResource( 34 )
 
 [node name="moneda25" type="Area2D" parent="." groups=[
 "monedas",
@@ -1517,15 +1527,15 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="moneda25"]
 scale = Vector2( 0.085381, 0.085381 )
-frames = SubResource( 21 )
+frames = SubResource( 22 )
 animation = "movimiento"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="moneda25"]
-shape = SubResource( 22 )
+shape = SubResource( 23 )
 
 [node name="animacionmoneda" type="AnimationPlayer" parent="moneda25"]
 playback_speed = 9.0
-anims/movimiento = SubResource( 34 )
+anims/movimiento = SubResource( 35 )
 
 [node name="moneda26" type="Area2D" parent="." groups=[
 "monedas",
@@ -1538,15 +1548,15 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="moneda26"]
 scale = Vector2( 0.085381, 0.085381 )
-frames = SubResource( 21 )
+frames = SubResource( 22 )
 animation = "movimiento"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="moneda26"]
-shape = SubResource( 22 )
+shape = SubResource( 23 )
 
 [node name="animacionmoneda" type="AnimationPlayer" parent="moneda26"]
 playback_speed = 9.0
-anims/movimiento = SubResource( 35 )
+anims/movimiento = SubResource( 36 )
 
 [node name="moneda3" type="Area2D" parent="." groups=[
 "monedas",
@@ -1559,15 +1569,15 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="moneda3"]
 scale = Vector2( 0.085381, 0.085381 )
-frames = SubResource( 21 )
+frames = SubResource( 22 )
 animation = "movimiento"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="moneda3"]
-shape = SubResource( 22 )
+shape = SubResource( 23 )
 
 [node name="animacionmoneda" type="AnimationPlayer" parent="moneda3"]
 playback_speed = 9.0
-anims/movimiento = SubResource( 36 )
+anims/movimiento = SubResource( 37 )
 
 [node name="moneda2" type="Area2D" parent="." groups=[
 "monedas",
@@ -1580,15 +1590,15 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="moneda2"]
 scale = Vector2( 0.085381, 0.085381 )
-frames = SubResource( 21 )
+frames = SubResource( 22 )
 animation = "movimiento"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="moneda2"]
-shape = SubResource( 22 )
+shape = SubResource( 23 )
 
 [node name="animacionmoneda" type="AnimationPlayer" parent="moneda2"]
 playback_speed = 9.0
-anims/movimiento = SubResource( 37 )
+anims/movimiento = SubResource( 38 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 1407.28, 28.644 )
@@ -1599,7 +1609,7 @@ texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 5424.74, 0 )
-shape = SubResource( 38 )
+shape = SubResource( 39 )
 
 [node name="techo2" type="Sprite" parent="."]
 position = Vector2( 3234.17, 28.9143 )
@@ -1658,7 +1668,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-shape = SubResource( 39 )
+shape = SubResource( 40 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
 position = Vector2( 9449.15, 390.986 )
@@ -1684,21 +1694,21 @@ script = ExtResource( 2 )
 ]]
 position = Vector2( -5, 0 )
 scale = Vector2( 1.16539, 1.16539 )
-frames = SubResource( 40 )
+frames = SubResource( 41 )
 animation = "moverse"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Glass" groups=[
 "heroe",
 ]]
 playback_speed = 9.0
-anims/correr = SubResource( 41 )
-anims/saltar = SubResource( 42 )
+anims/correr = SubResource( 42 )
+anims/saltar = SubResource( 43 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Glass" groups=[
 "heroe",
 ]]
 position = Vector2( 1, 81 )
-shape = SubResource( 43 )
+shape = SubResource( 44 )
 
 [node name="Camera2D" type="Camera2D" parent="Glass" groups=[
 "heroe",
@@ -1718,6 +1728,7 @@ autoplay = true
 [node name="Pocion Verde" parent="." instance=ExtResource( 41 )]
 position = Vector2( 1604.59, 392.652 )
 scale = Vector2( 0.4, 0.4 )
+
 [connection signal="area_entered" from="enemigo/Area2DB" to="enemigo" method="_on_Area2DB_area_entered"]
 [connection signal="body_entered" from="enemigo/Area2DPl" to="enemigo" method="_on_Area2DPl_body_entered"]
 [connection signal="body_exited" from="enemigo/Area2DPl" to="enemigo" method="_on_Area2DPl_body_exited"]
