@@ -1,3 +1,7 @@
+<<<<<<< Updated upstream
+=======
+[gd_scene load_steps=97 format=2]
+>>>>>>> Stashed changes
 [gd_scene load_steps=85 format=2]
 
 [ext_resource path="res://Run3.png" type="Texture" id=1]
@@ -477,7 +481,207 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 0 ]
 }
 
+<<<<<<< Updated upstream
 [sub_resource type="Animation" id=25]
+=======
+<<<<<<< HEAD
+[sub_resource type="Animation" id=44]
+length = 6.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 0 ]
+}
+
+[sub_resource type="Animation" id=45]
+length = 6.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 0 ]
+}
+
+[sub_resource type="Animation" id=46]
+length = 6.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 0 ]
+}
+
+[sub_resource type="Animation" id=47]
+length = 6.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 0 ]
+}
+
+[sub_resource type="Animation" id=48]
+length = 6.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 0 ]
+}
+
+[sub_resource type="Animation" id=49]
+length = 6.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 0 ]
+}
+
+[sub_resource type="Animation" id=50]
+length = 6.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 0 ]
+}
+
+[sub_resource type="Animation" id=51]
+length = 6.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 0 ]
+}
+
+[sub_resource type="Animation" id=54]
+length = 6.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 0 ]
+}
+
+[sub_resource type="Animation" id=55]
+length = 6.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 0 ]
+}
+
+[sub_resource type="Animation" id=56]
+length = 6.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 0 ]
+}
+
+[sub_resource type="Animation" id=52]
+length = 6.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 0 ]
+}
+
+[sub_resource type="Animation" id=53]
+=======
+[sub_resource type="Animation" id=25]
+>>>>>>> c21f63ef3b03e7415e1d38315f7f67a01bcc0a45
+>>>>>>> Stashed changes
 length = 6.0
 loop = true
 tracks/0/type = "value"
@@ -1285,6 +1489,11 @@ playback_speed = 9.0
 anims/movimiento = SubResource( 23 )
 
 [node name="moneda2" type="Area2D" parent="." groups=[
+<<<<<<< Updated upstream
+"monedas",
+]]
+position = Vector2( 2456.5, 379.216 )
+=======
 "monedas",
 ]]
 position = Vector2( 2456.5, 379.216 )
@@ -1303,6 +1512,83 @@ shape = SubResource( 22 )
 [node name="animacionmoneda" type="AnimationPlayer" parent="moneda2"]
 playback_speed = 9.0
 anims/movimiento = SubResource( 24 )
+
+[node name="moneda24" type="Area2D" parent="." groups=[
+"monedas",
+]]
+position = Vector2( 6297.72, 396.086 )
+script = ExtResource( 42 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="moneda24"]
+scale = Vector2( 0.085381, 0.085381 )
+frames = SubResource( 21 )
+animation = "movimiento"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="moneda24"]
+shape = SubResource( 22 )
+
+[node name="animacionmoneda" type="AnimationPlayer" parent="moneda24"]
+playback_speed = 9.0
+anims/movimiento = SubResource( 54 )
+
+[node name="moneda25" type="Area2D" parent="." groups=[
+"monedas",
+]]
+position = Vector2( 6420.49, 396.086 )
+script = ExtResource( 42 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="moneda25"]
+scale = Vector2( 0.085381, 0.085381 )
+frames = SubResource( 21 )
+animation = "movimiento"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="moneda25"]
+shape = SubResource( 22 )
+
+[node name="animacionmoneda" type="AnimationPlayer" parent="moneda25"]
+playback_speed = 9.0
+anims/movimiento = SubResource( 55 )
+
+[node name="moneda26" type="Area2D" parent="." groups=[
+"monedas",
+]]
+position = Vector2( 6534.85, 396.086 )
+script = ExtResource( 42 )
+>>>>>>> Stashed changes
+__meta__ = {
+"_edit_group_": true
+}
+
+<<<<<<< Updated upstream
+[node name="AnimatedSprite" type="AnimatedSprite" parent="moneda2"]
+=======
+[node name="AnimatedSprite" type="AnimatedSprite" parent="moneda26"]
+>>>>>>> Stashed changes
+scale = Vector2( 0.085381, 0.085381 )
+frames = SubResource( 21 )
+animation = "movimiento"
+
+<<<<<<< Updated upstream
+[node name="CollisionShape2D" type="CollisionShape2D" parent="moneda2"]
+shape = SubResource( 22 )
+
+[node name="animacionmoneda" type="AnimationPlayer" parent="moneda2"]
+playback_speed = 9.0
+anims/movimiento = SubResource( 24 )
+=======
+[node name="CollisionShape2D" type="CollisionShape2D" parent="moneda26"]
+shape = SubResource( 22 )
+
+[node name="animacionmoneda" type="AnimationPlayer" parent="moneda26"]
+playback_speed = 9.0
+anims/movimiento = SubResource( 56 )
+>>>>>>> Stashed changes
 
 [node name="moneda3" type="Area2D" parent="." groups=[
 "monedas",
@@ -1706,3 +1992,37 @@ scale = Vector2( 0.4, 0.4 )
 [connection signal="body_entered" from="enemigo2/AttackDetector" to="enemigo2" method="_on_AttackDetector_body_entered"]
 [connection signal="body_entered" from="moneda" to="moneda" method="_on_moneda_body_entered"]
 [connection signal="coin_collected" from="moneda" to="." method="_on_moneda_coin_collected"]
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+[connection signal="body_entered" from="moneda15" to="moneda15" method="_on_moneda_body_entered"]
+[connection signal="coin_collected" from="moneda15" to="." method="_on_moneda_coin_collected"]
+[connection signal="body_entered" from="moneda16" to="moneda16" method="_on_moneda_body_entered"]
+[connection signal="coin_collected" from="moneda16" to="." method="_on_moneda_coin_collected"]
+[connection signal="body_entered" from="moneda17" to="moneda17" method="_on_moneda_body_entered"]
+[connection signal="coin_collected" from="moneda17" to="." method="_on_moneda_coin_collected"]
+[connection signal="body_entered" from="moneda18" to="moneda18" method="_on_moneda_body_entered"]
+[connection signal="coin_collected" from="moneda18" to="." method="_on_moneda_coin_collected"]
+[connection signal="body_entered" from="moneda19" to="moneda19" method="_on_moneda_body_entered"]
+[connection signal="coin_collected" from="moneda19" to="." method="_on_moneda_coin_collected"]
+[connection signal="body_entered" from="moneda20" to="moneda20" method="_on_moneda_body_entered"]
+[connection signal="coin_collected" from="moneda20" to="." method="_on_moneda_coin_collected"]
+[connection signal="body_entered" from="moneda21" to="moneda21" method="_on_moneda_body_entered"]
+[connection signal="coin_collected" from="moneda21" to="." method="_on_moneda_coin_collected"]
+[connection signal="body_entered" from="moneda22" to="moneda22" method="_on_moneda_body_entered"]
+[connection signal="coin_collected" from="moneda22" to="." method="_on_moneda_coin_collected"]
+[connection signal="body_entered" from="moneda23" to="moneda23" method="_on_moneda_body_entered"]
+[connection signal="coin_collected" from="moneda23" to="." method="_on_moneda_coin_collected"]
+[connection signal="body_entered" from="moneda24" to="moneda24" method="_on_moneda_body_entered"]
+[connection signal="coin_collected" from="moneda24" to="." method="_on_moneda_coin_collected"]
+[connection signal="body_entered" from="moneda25" to="moneda25" method="_on_moneda_body_entered"]
+[connection signal="coin_collected" from="moneda25" to="." method="_on_moneda_coin_collected"]
+[connection signal="body_entered" from="moneda26" to="moneda26" method="_on_moneda_body_entered"]
+[connection signal="coin_collected" from="moneda26" to="." method="_on_moneda_coin_collected"]
+[connection signal="body_entered" from="moneda3" to="moneda3" method="_on_moneda_body_entered"]
+[connection signal="coin_collected" from="moneda3" to="." method="_on_moneda_coin_collected"]
+[connection signal="body_entered" from="moneda2" to="moneda2" method="_on_moneda_body_entered"]
+[connection signal="coin_collected" from="moneda2" to="." method="_on_moneda_coin_collected"]
+=======
+>>>>>>> c21f63ef3b03e7415e1d38315f7f67a01bcc0a45
+>>>>>>> Stashed changes
