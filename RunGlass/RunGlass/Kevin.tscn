@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Enemigo Kevin/K_Hurt1.png" type="Texture" id=1]
 [ext_resource path="res://Enemigo Kevin/K_Hurt2.png" type="Texture" id=2]
@@ -14,18 +14,19 @@
 [ext_resource path="res://Enemigo Kevin/Entry8.png" type="Texture" id=12]
 [ext_resource path="res://Enemigo Kevin/K_Walk1.png" type="Texture" id=13]
 [ext_resource path="res://Kevin.gd" type="Script" id=14]
+[ext_resource path="res://Enemigo Kevin/K_Walk2.png" type="Texture" id=15]
+[ext_resource path="res://Enemigo Kevin/K_Walk4.png" type="Texture" id=16]
+[ext_resource path="res://Enemigo Kevin/K_Walk6.png" type="Texture" id=17]
+[ext_resource path="res://Enemigo Kevin/K_Walk7.png" type="Texture" id=18]
+[ext_resource path="res://Enemigo Kevin/K_Walk5.png" type="Texture" id=19]
+[ext_resource path="res://Enemigo Kevin/K_Walk3.png" type="Texture" id=20]
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=43]
 animations = [ {
-"frames": [ ExtResource( 9 ), ExtResource( 13 ) ],
+"frames": [ ExtResource( 9 ), ExtResource( 13 ), ExtResource( 15 ), ExtResource( 20 ), ExtResource( 16 ), ExtResource( 20 ), ExtResource( 15 ), ExtResource( 19 ), ExtResource( 13 ), ExtResource( 17 ), ExtResource( 18 ) ],
 "loop": true,
 "name": "Attack",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 11 ), ExtResource( 12 ) ],
-"loop": true,
-"name": "Entry",
-"speed": 5.0
+"speed": 11.0
 }, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
@@ -36,37 +37,176 @@ animations = [ {
 "loop": true,
 "name": "Hurt",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "Entry",
+"speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=2]
+[sub_resource type="Animation" id=44]
+resource_name = "Attack"
+length = 1.2
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Attack" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 4, 5, 6, 7, 8, 10 ]
+}
+
+[sub_resource type="Animation" id=45]
+resource_name = "Entry"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Entry" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
+}
+
+[sub_resource type="Animation" id=46]
+resource_name = "Hurt"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Hurt" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+
+[sub_resource type="Animation" id=47]
+resource_name = "Patrol"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Patrol" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="CapsuleShape2D" id=48]
 radius = 834.22
 height = 913.16
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=49]
 extents = Vector2( 749.257, 198.141 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=50]
 extents = Vector2( 4806.1, 430.438 )
 
+[sub_resource type="RectangleShape2D" id=51]
+extents = Vector2( 849.439, 1323.2 )
+
 [node name="Kevin" type="KinematicBody2D"]
-scale = Vector2( 0.8, 0.8 )
+position = Vector2( 476.462, 437.506 )
+scale = Vector2( 0.05, 0.05 )
 script = ExtResource( 14 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-frames = SubResource( 1 )
-animation = "Patrol"
+frames = SubResource( 43 )
+animation = "Entry"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite"]
+anims/Attack = SubResource( 44 )
+anims/Entry = SubResource( 45 )
+anims/Hurt = SubResource( 46 )
+anims/Patrol = SubResource( 47 )
 
 [node name="CollisionAttack" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2( -176.051, 134.848 )
-shape = SubResource( 2 )
+shape = SubResource( 48 )
+disabled = true
 
 [node name="CollisionPatrol" type="CollisionShape2D" parent="."]
 position = Vector2( 44.8985, 1290.83 )
-shape = SubResource( 3 )
+shape = SubResource( 49 )
 
 [node name="AreaPlDetector" type="Area2D" parent="."]
 
 [node name="PlayerD" type="CollisionShape2D" parent="AreaPlDetector"]
 position = Vector2( -16.8369, 656.64 )
-shape = SubResource( 4 )
+shape = SubResource( 50 )
+
+[node name="BulletDetector" type="Area2D" parent="."]
+
+[node name="BulletD" type="CollisionShape2D" parent="BulletDetector"]
+position = Vector2( -157.145, 22.4493 )
+shape = SubResource( 51 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="AreaPlDetector" to="." method="_on_AreaPlDetector_body_entered"]
+[connection signal="area_entered" from="BulletDetector" to="." method="_on_BulletDetector_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

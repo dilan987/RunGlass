@@ -10,4 +10,4 @@ func _process(delta):
 func _on_Pocion_Verde_body_entered(body):
 	if body.is_in_group("heroe"):
 		queue_free()
-		Globals.Change_Jump_Force(body, -500.0, 15.0)
+		Globals.Change_Jump_Force(body, -580.0, 15.0)
