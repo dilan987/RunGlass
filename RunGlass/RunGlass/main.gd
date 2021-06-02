@@ -2,8 +2,11 @@ extends Node2D
 
 var vidasjugador= 3
 var monedas = 1
+var num_lifes
+var vida
 var score = 0
 var ofset_vidas =80
+var tex_1 = preload("res://Cuchara.png")
 export (PackedScene) var sprite_vidas
 export (PackedScene) var sprite_monedas
 onready var scoreLabText = get_node("GUI/RichTextLabel")
@@ -54,16 +57,11 @@ func _ready():
 	animacion_moneda26.play("movimiento")
 	
 	
-	
-	
-	
 func crearvidas():
 	for i in vidasjugador:
-		var vida = sprite_vidas.instance()
-		get_tree().get_nodes_in_group("gui")[0].add_child(vida) 
+		vida = sprite_vidas.instance()
+		get_tree().get_nodes_in_group("gui")[0].add_child(vida)
 		#vida.global_position.x += 30 * i
-		
-		
 		
 	
 func crearmonedas():
@@ -72,10 +70,23 @@ func crearmonedas():
 		get_tree().get_nodes_in_group("gui")[0].add_child(moneda) 	
 	
 	
-	
 func _on_moneda_coin_collected():
 	score = score + 1
 	var scoreText = "Score: " + String(score)
 	print(scoreText)
 	scoreLabText.clear()
 	scoreLabText.add_text(scoreText)
+
+func update_health(new_value):
+	num_lifes = vida
+	if new_value <= 2: #and crearvidas():
+#		vida.set_texture(tex_1)
+		num_lifes.get_node("Sprite").set_texture(tex_1)
+		get_tree().get_nodes_in_group("gui")[0].add_child(vida)
+#	elif new_value == 1:
+#		num_lifes.get_node("Sprite").set_texture(tex_1)
+#		get_tree().get_nodes_in_group("gui")[0].add_child(vida)
+
+func _on_Glass_Life(Life):
+	update_health(Life)
+	print("Se actualizo")

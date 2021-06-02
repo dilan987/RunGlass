@@ -98,15 +98,6 @@ func _on_Area2DPl_body_exited(body):
 func _on_AttackDetector_body_entered(body):
 	get_tree().reload_current_scene()
 
-
-#func _on_Area2DB_body_entered(body):
-#	if body.is_in_group("Balas"):
-#		var Amount = 20
-#		Take_damage(Amount)
-#		print_debug("Health =", 0)	
-#		Movimiento = Vector2(0,0)
-
-
 func _on_Area2DB_area_entered(area):
 	if area.is_in_group("Balas"):
 		var Amount = 20
