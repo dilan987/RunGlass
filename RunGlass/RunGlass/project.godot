@@ -16,13 +16,17 @@ _global_script_class_icons={
 [application]
 
 config/name="RunGlass"
-run/main_scene="res://runglass.tscn"
+run/main_scene="res://Menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 Pause="*res://Pause.gd"
 Globals="*res://Global.gd"
+
+[display]
+
+window/stretch/mode="2d"
 
 [input]
 

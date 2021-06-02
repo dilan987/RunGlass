@@ -698,15 +698,15 @@ extents = Vector2( 115.672, 671.794 )
 
 [sub_resource type="SpriteFrames" id=41]
 animations = [ {
-"frames": [ ExtResource( 13 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "saltar",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 1 ), ExtResource( 8 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "moverse",
 "speed": 9.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "saltar",
+"speed": 5.0
 } ]
 
 [sub_resource type="Animation" id=42]
@@ -1728,7 +1728,6 @@ autoplay = true
 [node name="Pocion Verde" parent="." instance=ExtResource( 41 )]
 position = Vector2( 1604.59, 392.652 )
 scale = Vector2( 0.4, 0.4 )
-
 [connection signal="area_entered" from="enemigo/Area2DB" to="enemigo" method="_on_Area2DB_area_entered"]
 [connection signal="body_entered" from="enemigo/Area2DPl" to="enemigo" method="_on_Area2DPl_body_entered"]
 [connection signal="body_exited" from="enemigo/Area2DPl" to="enemigo" method="_on_Area2DPl_body_exited"]
