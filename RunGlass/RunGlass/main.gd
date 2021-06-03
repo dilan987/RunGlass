@@ -6,7 +6,8 @@ var num_lifes
 var vida
 var score = 0
 var ofset_vidas =80
-var tex_1 = preload("res://Cuchara.png")
+var tex_1 = preload("res://1.png")
+var tex_2 = preload("res://2.png")
 export (PackedScene) var sprite_vidas
 export (PackedScene) var sprite_monedas
 onready var scoreLabText = get_node("GUI/RichTextLabel")
@@ -79,13 +80,13 @@ func _on_moneda_coin_collected():
 
 func update_health(new_value):
 	num_lifes = vida
-	if new_value <= 2: #and crearvidas():
+	if new_value == 2: #and crearvidas():
 #		vida.set_texture(tex_1)
+		num_lifes.get_node("Sprite").set_texture(tex_2)
+		get_tree().get_nodes_in_group("gui")[0].add_child(vida)
+	elif new_value <= 1:
 		num_lifes.get_node("Sprite").set_texture(tex_1)
 		get_tree().get_nodes_in_group("gui")[0].add_child(vida)
-#	elif new_value == 1:
-#		num_lifes.get_node("Sprite").set_texture(tex_1)
-#		get_tree().get_nodes_in_group("gui")[0].add_child(vida)
 
 func _on_Glass_Life(Life):
 	update_health(Life)
