@@ -1717,7 +1717,7 @@ shape = SubResource( 44 )
 current = true
 limit_left = 0
 limit_top = 0
-limit_bottom = 0
+limit_bottom = 700
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 39 )
