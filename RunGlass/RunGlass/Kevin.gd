@@ -78,6 +78,15 @@ func Take_Damage(Amount):
 				$CollisionPatrol.call_deferred("set_disabled", true)
 		Amount = 0
 		print("Health =", 0)
+
+func hit():
+	$AttackDetector.monitoring = true
+	$AttackDetector/CollisionShape2D.disabled = false
+	
+func end_of_hit():
+	$AttackDetector.monitoring = false
+	$AttackDetector/CollisionShape2D.disabled = true
+
 	
 func _on_AreaPlDetector_body_entered(body):
 	if body.is_in_group("heroe"):
@@ -104,3 +113,17 @@ func _on_BulletDetector_area_entered(area):
 
 func _on_AreaPlDetector_body_exited(body):
 	Player = null
+
+
+func _on_AttackDetector_body_entered(body):
+	if body.is_in_group("heroe"):
+		body.get_tree().get_nodes_in_group("heroe")[0].Lose_Life(2)
+		yield(get_tree().create_timer(0.2), "timeout")
+		$Timer.start()
+		$AreaPlDetector/PlayerD.call_deferred("set_disabled", true)
+		$BulletDetector/BulletD.call_deferred("set_disabled", true)
+		if $Timer.wait_time <= 0:
+			queue_free()
+			$CollisionPatrol.call_deferred("set_disabled", true)
+	else:
+		body = null

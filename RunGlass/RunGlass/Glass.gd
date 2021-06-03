@@ -56,7 +56,7 @@ func respawn():
 	
 
 func Lose_Life(Dano):
-	if Life == 0:
+	if Life <= 0:
 		get_tree().reload_current_scene()
 	else:
 		Life =  Life - Dano
