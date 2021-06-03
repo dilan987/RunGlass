@@ -109,11 +109,14 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 1 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
 "values": [ {
 "args": [  ],
 "method": "hit"
+}, {
+"args": [  ],
+"method": "end_of_hit"
 } ]
 }
 
@@ -192,11 +195,14 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 1 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
 "values": [ {
 "args": [  ],
 "method": "hit"
+}, {
+"args": [  ],
+"method": "end_of_hit"
 } ]
 }
 
@@ -262,11 +268,14 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 1 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
 "values": [ {
 "args": [  ],
 "method": "hit"
+}, {
+"args": [  ],
+"method": "end_of_hit"
 } ]
 }
 
@@ -332,11 +341,14 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 1 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
 "values": [ {
 "args": [  ],
 "method": "hit"
+}, {
+"args": [  ],
+"method": "end_of_hit"
 } ]
 }
 
@@ -402,11 +414,14 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 1 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
 "values": [ {
 "args": [  ],
 "method": "hit"
+}, {
+"args": [  ],
+"method": "end_of_hit"
 } ]
 }
 
@@ -701,15 +716,15 @@ extents = Vector2( 115.672, 671.794 )
 
 [sub_resource type="SpriteFrames" id=41]
 animations = [ {
-"frames": [ ExtResource( 13 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "saltar",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 1 ), ExtResource( 8 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "moverse",
 "speed": 9.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "saltar",
+"speed": 5.0
 } ]
 
 [sub_resource type="Animation" id=42]
@@ -1004,7 +1019,7 @@ __meta__ = {
 scale = Vector2( 0.333736, 0.333736 )
 frames = SubResource( 6 )
 animation = "Attack"
-frame = 2
+frame = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="enemigo/AnimatedSprite"]
 anims/Attack = SubResource( 7 )
@@ -1059,7 +1074,7 @@ __meta__ = {
 scale = Vector2( 0.333736, 0.333736 )
 frames = SubResource( 6 )
 animation = "Attack"
-frame = 2
+frame = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="enemigo3/AnimatedSprite"]
 anims/Attack = SubResource( 13 )
@@ -1114,7 +1129,7 @@ __meta__ = {
 scale = Vector2( 0.333736, 0.333736 )
 frames = SubResource( 6 )
 animation = "Attack"
-frame = 2
+frame = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="enemigo4/AnimatedSprite"]
 anims/Attack = SubResource( 15 )
@@ -1169,7 +1184,7 @@ __meta__ = {
 scale = Vector2( 0.333736, 0.333736 )
 frames = SubResource( 6 )
 animation = "Attack"
-frame = 2
+frame = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="enemigo5/AnimatedSprite"]
 anims/Attack = SubResource( 17 )
@@ -1224,7 +1239,7 @@ __meta__ = {
 scale = Vector2( 0.333736, 0.333736 )
 frames = SubResource( 6 )
 animation = "Attack"
-frame = 2
+frame = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="enemigo2/AnimatedSprite"]
 anims/Attack = SubResource( 19 )
