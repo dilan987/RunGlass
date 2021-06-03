@@ -96,7 +96,10 @@ func _on_Area2DPl_body_exited(body):
 
 
 func _on_AttackDetector_body_entered(body):
-	get_tree().reload_current_scene()
+	if body.is_in_group("heroe"):
+		body.get_tree().get_nodes_in_group("heroe")[0].Lose_Life(1)
+	else:
+		body = null
 
 func _on_Area2DB_area_entered(area):
 	if area.is_in_group("Balas"):

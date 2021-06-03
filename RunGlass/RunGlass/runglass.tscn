@@ -700,15 +700,15 @@ extents = Vector2( 115.672, 671.794 )
 
 [sub_resource type="SpriteFrames" id=41]
 animations = [ {
-"frames": [ ExtResource( 13 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "saltar",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 1 ), ExtResource( 8 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "moverse",
 "speed": 9.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "saltar",
+"speed": 5.0
 } ]
 
 [sub_resource type="Animation" id=42]

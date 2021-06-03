@@ -38,9 +38,9 @@ func _process(delta):
 	if(get_slide_collision(get_slide_count()-1)!=null):
 		var colisionador =get_slide_collision(get_slide_count()-1).collider
 		if(colisionador.is_in_group("enemigos")):
-			Lose_Life()
+			Lose_Life(1)
 #			get_tree().get_nodes_in_group("heroe")[0].respawn()
-			emit_signal("Life", Life)
+			#emit_signal("Life", Life)
 			print(Life)
 			yield(get_tree().create_timer(1), "timeout")
 		if(colisionador.is_in_group("objetos-malos")):
@@ -55,8 +55,9 @@ func respawn():
 	get_tree().get_nodes_in_group("heroe")[0].global_position = get_tree().get_nodes_in_group("spawn")[0].global_position
 	
 
-func Lose_Life():
-	if Life <= 0:
-		Life = 0
+func Lose_Life(Dano):
+	if Life == 0:
+		get_tree().reload_current_scene()
 	else:
-		Life =  Life -1
+		Life =  Life - Dano
+		emit_signal("Life", Life)
