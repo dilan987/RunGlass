@@ -1,4 +1,4 @@
-[gd_scene load_steps=91 format=2]
+[gd_scene load_steps=153 format=2]
 
 [ext_resource path="res://Run3.png" type="Texture" id=1]
 [ext_resource path="res://Glass.gd" type="Script" id=2]
@@ -15,7 +15,7 @@
 [ext_resource path="res://Jump2.png" type="Texture" id=13]
 [ext_resource path="res://camino con huecos grandes.png" type="Texture" id=14]
 [ext_resource path="res://tabla de lado.png" type="Texture" id=15]
-[ext_resource path="res://enemigo-1.png" type="Texture" id=16]
+[ext_resource path="res://boss_animacion1/boss_estatico_00022.png" type="Texture" id=16]
 [ext_resource path="res://enemigo.gd" type="Script" id=17]
 [ext_resource path="res://main.gd" type="Script" id=18]
 [ext_resource path="res://vidas.tscn" type="PackedScene" id=19]
@@ -46,6 +46,66 @@
 [ext_resource path="res://Kevin.tscn" type="PackedScene" id=44]
 [ext_resource path="res://salto.wav" type="AudioStream" id=45]
 [ext_resource path="res://moneda.wav" type="AudioStream" id=46]
+[ext_resource path="res://boss_animacion1/boss_estatico_00006.png" type="Texture" id=47]
+[ext_resource path="res://boss_animacion1/boss_estatico_00027.png" type="Texture" id=48]
+[ext_resource path="res://boss_animacion1/boss_estatico_00007.png" type="Texture" id=49]
+[ext_resource path="res://boss_animacion1/boss_estatico_00013.png" type="Texture" id=50]
+[ext_resource path="res://boss_animacion1/boss_estatico_00020.png" type="Texture" id=51]
+[ext_resource path="res://boss_animacion1/boss_estatico_00024.png" type="Texture" id=52]
+[ext_resource path="res://boss_animacion1/boss_estatico_00029.png" type="Texture" id=53]
+[ext_resource path="res://boss_animacion1/boss_estatico_00005.png" type="Texture" id=54]
+[ext_resource path="res://boss_animacion1/boss_estatico_00015.png" type="Texture" id=55]
+[ext_resource path="res://boss_animacion1/boss_estatico_00034.png" type="Texture" id=56]
+[ext_resource path="res://boss_animacion1/boss_estatico_00035.png" type="Texture" id=57]
+[ext_resource path="res://boss_animacion1/boss_estatico_00047.png" type="Texture" id=58]
+[ext_resource path="res://boss_animacion1/boss_estatico_00000.png" type="Texture" id=59]
+[ext_resource path="res://boss_animacion1/boss_estatico_00043.png" type="Texture" id=60]
+[ext_resource path="res://boss_animacion1/boss_estatico_00002.png" type="Texture" id=61]
+[ext_resource path="res://boss_animacion1/boss_estatico_00042.png" type="Texture" id=62]
+[ext_resource path="res://boss_animacion1/boss_estatico_00048.png" type="Texture" id=63]
+[ext_resource path="res://boss_animacion1/boss_estatico_00025.png" type="Texture" id=64]
+[ext_resource path="res://boss_animacion1/boss_estatico_00037.png" type="Texture" id=65]
+[ext_resource path="res://boss_animacion1/boss_estatico_00045.png" type="Texture" id=66]
+[ext_resource path="res://boss_animacion1/boss_estatico_00049.png" type="Texture" id=67]
+[ext_resource path="res://boss_animacion1/boss_estatico_00011.png" type="Texture" id=68]
+[ext_resource path="res://boss_animacion1/boss_estatico_00030.png" type="Texture" id=69]
+[ext_resource path="res://boss_animacion1/boss_estatico_00033.png" type="Texture" id=70]
+[ext_resource path="res://boss_animacion1/boss_estatico_00021.png" type="Texture" id=71]
+[ext_resource path="res://boss_animacion1/boss_estatico_00044.png" type="Texture" id=72]
+[ext_resource path="res://boss_animacion1/boss_estatico_00052.png" type="Texture" id=73]
+[ext_resource path="res://boss_animacion1/boss_estatico_00012.png" type="Texture" id=74]
+[ext_resource path="res://boss_animacion1/boss_estatico_00036.png" type="Texture" id=75]
+[ext_resource path="res://boss_animacion1/boss_estatico_00041.png" type="Texture" id=76]
+[ext_resource path="res://boss_animacion1/boss_estatico_00009.png" type="Texture" id=77]
+[ext_resource path="res://boss_animacion1/boss_estatico_00017.png" type="Texture" id=78]
+[ext_resource path="res://boss_animacion1/boss_estatico_00018.png" type="Texture" id=79]
+[ext_resource path="res://boss_animacion1/boss_estatico_00019.png" type="Texture" id=80]
+[ext_resource path="res://boss_animacion1/boss_estatico_00023.png" type="Texture" id=81]
+[ext_resource path="res://boss_animacion1/boss_estatico_00028.png" type="Texture" id=82]
+[ext_resource path="res://boss_animacion1/boss_estatico_00031.png" type="Texture" id=83]
+[ext_resource path="res://boss_animacion1/boss_estatico_00039.png" type="Texture" id=84]
+[ext_resource path="res://boss_animacion1/boss_estatico_00040.png" type="Texture" id=85]
+[ext_resource path="res://boss_animacion1/boss_estatico_00046.png" type="Texture" id=86]
+[ext_resource path="res://boss_animacion1/boss_estatico_00032.png" type="Texture" id=87]
+[ext_resource path="res://boss_animacion1/boss_estatico_00051.png" type="Texture" id=88]
+[ext_resource path="res://boss_animacion1/boss_estatico_00010.png" type="Texture" id=89]
+[ext_resource path="res://boss_animacion1/boss_estatico_00016.png" type="Texture" id=90]
+[ext_resource path="res://boss_animacion1/boss_estatico_00053.png" type="Texture" id=91]
+[ext_resource path="res://boss_animacion1/boss_estatico_00001.png" type="Texture" id=92]
+[ext_resource path="res://boss_animacion1/boss_estatico_00003.png" type="Texture" id=93]
+[ext_resource path="res://boss_animacion1/boss_estatico_00008.png" type="Texture" id=94]
+[ext_resource path="res://boss_animacion1/boss_estatico_00014.png" type="Texture" id=95]
+[ext_resource path="res://boss_animacion1/boss_estatico_00026.png" type="Texture" id=96]
+[ext_resource path="res://boss_animacion1/boss_estatico_00038.png" type="Texture" id=97]
+[ext_resource path="res://boss_animacion1/boss_estatico_00050.png" type="Texture" id=98]
+[ext_resource path="res://boss_animacion1/boss_estatico_00054.png" type="Texture" id=99]
+[ext_resource path="res://boss_animacion1/boss_estatico_00004.png" type="Texture" id=100]
+[ext_resource path="res://boss_animacion1/boss_estatico_00058.png" type="Texture" id=101]
+[ext_resource path="res://boss_animacion1/boss_estatico_00059.png" type="Texture" id=102]
+[ext_resource path="res://boss_animacion1/boss_estatico_00055.png" type="Texture" id=103]
+[ext_resource path="res://boss_animacion1/boss_estatico_00056.png" type="Texture" id=104]
+[ext_resource path="res://boss_animacion1/boss_estatico_00057.png" type="Texture" id=105]
+[ext_resource path="res://Boss.gd" type="Script" id=106]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 42.8368, 409.085 )
@@ -716,18 +776,43 @@ extents = Vector2( 115.672, 671.794 )
 
 [sub_resource type="SpriteFrames" id=41]
 animations = [ {
-"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 1 ), ExtResource( 8 ), ExtResource( 5 ) ],
+"frames": [ ExtResource( 59 ), ExtResource( 92 ), ExtResource( 61 ), ExtResource( 93 ), ExtResource( 100 ), ExtResource( 54 ), ExtResource( 47 ), ExtResource( 49 ), ExtResource( 94 ), ExtResource( 77 ), ExtResource( 89 ), ExtResource( 68 ), ExtResource( 74 ), ExtResource( 50 ), ExtResource( 95 ), ExtResource( 55 ), ExtResource( 90 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 51 ), ExtResource( 71 ), ExtResource( 16 ), ExtResource( 81 ), ExtResource( 52 ), ExtResource( 64 ), ExtResource( 96 ), ExtResource( 48 ), ExtResource( 82 ), ExtResource( 53 ), ExtResource( 69 ), ExtResource( 83 ), ExtResource( 87 ), ExtResource( 70 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 75 ), ExtResource( 65 ), ExtResource( 97 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 76 ), ExtResource( 62 ), ExtResource( 60 ), ExtResource( 72 ), ExtResource( 66 ), ExtResource( 86 ), ExtResource( 58 ), ExtResource( 63 ), ExtResource( 67 ), ExtResource( 98 ), ExtResource( 88 ), ExtResource( 73 ), ExtResource( 91 ), ExtResource( 99 ), ExtResource( 103 ), ExtResource( 104 ), ExtResource( 105 ), ExtResource( 101 ), ExtResource( 102 ) ],
 "loop": true,
-"name": "moverse",
-"speed": 9.0
-}, {
+"name": "estatico",
+"speed": 15.0
+} ]
+
+[sub_resource type="Animation" id=42]
+resource_name = "estaticos_boss"
+length = 18.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.6, 0.9, 1.2, 1.5, 1.8, 2.1, 2.4, 2.7, 3, 3.3, 3.6, 3.9, 4.2, 4.5, 4.8, 5.1, 5.4, 5.7, 6, 6.3, 6.6, 6.9, 7.2, 7.5, 7.7, 8, 8.3, 8.6, 8.9, 9.2, 9.5, 9.8, 10.1, 10.4, 10.6, 10.9, 11.2, 11.5, 11.8, 12.2, 12.5, 12.8, 13.1, 13.4, 13.7, 14, 14.3, 14.6, 14.9, 15.2, 15.5, 15.8, 16.1, 16.4, 16.7, 17, 17.3, 17.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59 ]
+}
+
+[sub_resource type="SpriteFrames" id=43]
+animations = [ {
 "frames": [ ExtResource( 13 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "saltar",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 1 ), ExtResource( 8 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "moverse",
+"speed": 9.0
 } ]
 
-[sub_resource type="Animation" id=42]
+[sub_resource type="Animation" id=44]
 length = 5.0
 loop = true
 tracks/0/type = "value"
@@ -743,7 +828,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 0 ]
 }
 
-[sub_resource type="Animation" id=43]
+[sub_resource type="Animation" id=45]
 length = 6.0
 loop = true
 tracks/0/type = "value"
@@ -759,7 +844,7 @@ tracks/0/keys = {
 "values": [ 1, 2, 3, 4, 0 ]
 }
 
-[sub_resource type="RectangleShape2D" id=44]
+[sub_resource type="RectangleShape2D" id=46]
 extents = Vector2( 140.932, 264.277 )
 
 [node name="main" type="Node2D"]
@@ -1688,17 +1773,24 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 shape = SubResource( 40 )
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="."]
-position = Vector2( 9449.15, 390.986 )
+[node name="Boss" type="KinematicBody2D" parent="."]
+position = Vector2( 9272.76, 443.903 )
+script = ExtResource( 106 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="Sprite" parent="StaticBody2D3"]
-scale = Vector2( 1.33343, 1.33343 )
-texture = ExtResource( 16 )
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Boss"]
+scale = Vector2( 0.52123, 0.52123 )
+frames = SubResource( 41 )
+animation = "estatico"
+frame = 41
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Boss"]
+playback_speed = 12.0
+anims/estaticos_boss = SubResource( 42 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boss"]
 
 [node name="Glass" type="KinematicBody2D" parent="." groups=[
 "heroe",
@@ -1712,21 +1804,21 @@ script = ExtResource( 2 )
 ]]
 position = Vector2( -5, 0 )
 scale = Vector2( 1.16539, 1.16539 )
-frames = SubResource( 41 )
+frames = SubResource( 43 )
 animation = "moverse"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Glass" groups=[
 "heroe",
 ]]
 playback_speed = 9.0
-anims/correr = SubResource( 42 )
-anims/saltar = SubResource( 43 )
+anims/correr = SubResource( 44 )
+anims/saltar = SubResource( 45 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Glass" groups=[
 "heroe",
 ]]
 position = Vector2( 1, 81 )
-shape = SubResource( 44 )
+shape = SubResource( 46 )
 
 [node name="Camera2D" type="Camera2D" parent="Glass" groups=[
 "heroe",
@@ -1762,7 +1854,6 @@ volume_db = 6.118
 [node name="2" type="AudioStreamPlayer" parent="Node"]
 stream = ExtResource( 46 )
 volume_db = 2.447
-
 [connection signal="area_entered" from="enemigo/Area2DB" to="enemigo" method="_on_Area2DB_area_entered"]
 [connection signal="body_entered" from="enemigo/Area2DPl" to="enemigo" method="_on_Area2DPl_body_entered"]
 [connection signal="body_exited" from="enemigo/Area2DPl" to="enemigo" method="_on_Area2DPl_body_exited"]
