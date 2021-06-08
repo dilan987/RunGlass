@@ -2,7 +2,7 @@ extends Sprite
 
 
 var dir : Vector2
-var speed = 970
+var speed = 650
 var Mouse_Position
 
 
@@ -11,10 +11,14 @@ func fire(origin:Vector2, dest : Vector2):
 	
 func _process(delta):
 	if dir:
-		global_position += dir * delta * 350
+		global_position += dir * delta * speed
 	Mouse_Position = get_local_mouse_position()
 	rotation += Mouse_Position.angle()*0.2
 	translate(dir)
+
+func BulletDir(dir):
+	set_rotation(dir)
+	dir = Vector2(speed, 0).rotated(dir)
 
 
 #func BulletDir(dir, pos):

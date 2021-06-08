@@ -35,9 +35,14 @@ var balaR= preload ("res://balita.tscn")
 func _input(event):
 	if event.is_action_pressed("disparar"):
 		var bala = balaR.instance()
+		var rotation = get_rotation()
 		bala.fire($Glass.global_position, get_global_mouse_position())
+		if $Glass/AnimatedSprite.flip_h:
+			rotation += PI
 		bala.global_position= $Glass.global_position
+		bala.BulletDir(rotation)
 		add_child(bala)
+		
 		
 func _ready():
 	crearvidas()

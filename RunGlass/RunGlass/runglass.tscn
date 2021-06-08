@@ -1,4 +1,4 @@
-[gd_scene load_steps=153 format=2]
+[gd_scene load_steps=155 format=2]
 
 [ext_resource path="res://Run3.png" type="Texture" id=1]
 [ext_resource path="res://Glass.gd" type="Script" id=2]
@@ -799,7 +799,14 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59 ]
 }
 
-[sub_resource type="SpriteFrames" id=43]
+[sub_resource type="CapsuleShape2D" id=43]
+radius = 71.6094
+
+[sub_resource type="CapsuleShape2D" id=44]
+radius = 83.8701
+height = 139.251
+
+[sub_resource type="SpriteFrames" id=45]
 animations = [ {
 "frames": [ ExtResource( 13 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 9 ) ],
 "loop": true,
@@ -812,7 +819,7 @@ animations = [ {
 "speed": 9.0
 } ]
 
-[sub_resource type="Animation" id=44]
+[sub_resource type="Animation" id=46]
 length = 5.0
 loop = true
 tracks/0/type = "value"
@@ -828,7 +835,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 0 ]
 }
 
-[sub_resource type="Animation" id=45]
+[sub_resource type="Animation" id=47]
 length = 6.0
 loop = true
 tracks/0/type = "value"
@@ -844,7 +851,7 @@ tracks/0/keys = {
 "values": [ 1, 2, 3, 4, 0 ]
 }
 
-[sub_resource type="RectangleShape2D" id=46]
+[sub_resource type="RectangleShape2D" id=48]
 extents = Vector2( 140.932, 264.277 )
 
 [node name="main" type="Node2D"]
@@ -1790,7 +1797,16 @@ frame = 41
 playback_speed = 12.0
 anims/estaticos_boss = SubResource( 42 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boss"]
+[node name="Area2D" type="Area2D" parent="Boss"]
+
+[node name="CollisionCabeza" type="CollisionShape2D" parent="Boss/Area2D"]
+position = Vector2( -109.376, -68.9221 )
+shape = SubResource( 43 )
+
+[node name="CollisionCuerpo" type="CollisionShape2D" parent="Boss"]
+position = Vector2( 65.9258, 65.9253 )
+rotation = -0.6353
+shape = SubResource( 44 )
 
 [node name="Glass" type="KinematicBody2D" parent="." groups=[
 "heroe",
@@ -1804,21 +1820,21 @@ script = ExtResource( 2 )
 ]]
 position = Vector2( -5, 0 )
 scale = Vector2( 1.16539, 1.16539 )
-frames = SubResource( 43 )
+frames = SubResource( 45 )
 animation = "moverse"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Glass" groups=[
 "heroe",
 ]]
 playback_speed = 9.0
-anims/correr = SubResource( 44 )
-anims/saltar = SubResource( 45 )
+anims/correr = SubResource( 46 )
+anims/saltar = SubResource( 47 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Glass" groups=[
 "heroe",
 ]]
 position = Vector2( 1, 81 )
-shape = SubResource( 46 )
+shape = SubResource( 48 )
 
 [node name="Camera2D" type="Camera2D" parent="Glass" groups=[
 "heroe",
@@ -1854,6 +1870,7 @@ volume_db = 6.118
 [node name="2" type="AudioStreamPlayer" parent="Node"]
 stream = ExtResource( 46 )
 volume_db = 2.447
+
 [connection signal="area_entered" from="enemigo/Area2DB" to="enemigo" method="_on_Area2DB_area_entered"]
 [connection signal="body_entered" from="enemigo/Area2DPl" to="enemigo" method="_on_Area2DPl_body_entered"]
 [connection signal="body_exited" from="enemigo/Area2DPl" to="enemigo" method="_on_Area2DPl_body_exited"]

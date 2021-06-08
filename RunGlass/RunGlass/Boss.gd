@@ -2,10 +2,12 @@ extends KinematicBody2D
 
 onready var sprite = $AnimatedSprite
 onready var animacion = $AnimationPlayer
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 
+enum {
+	ATTACK1,
+	ATTACK2,
+	HURT
+}
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
