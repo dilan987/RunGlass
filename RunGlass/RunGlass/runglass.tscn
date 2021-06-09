@@ -1870,7 +1870,7 @@ autoplay = true
 [node name="CanvasLayer2" parent="." instance=ExtResource( 40 )]
 
 [node name="Pocion Verde" parent="." instance=ExtResource( 41 )]
-position = Vector2( 1604.59, 392.652 )
+position = Vector2( 4651.42, -5.66296 )
 scale = Vector2( 0.4, 0.4 )
 
 [node name="Kevin" parent="." instance=ExtResource( 44 )]
