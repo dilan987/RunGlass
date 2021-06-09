@@ -4,7 +4,6 @@
 [ext_resource path="res://runglass.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Menu.gd" type="Script" id=4]
 
-
 [sub_resource type="StreamTexture" id=1]
 flags = 4
 load_path = "res://.import/boton play.png-bb750a8043d815978a89eaf0194e6888.stex"
@@ -73,6 +72,7 @@ margin_top = 6.0
 margin_right = 2038.0
 margin_bottom = 1006.0
 texture_normal = SubResource( 2 )
+
 [connection signal="pressed" from="VBoxContainer/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/play" to="." method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="VBoxContainer2/salir" to="." method="_on_salir_pressed"]
