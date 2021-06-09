@@ -1,18 +1,17 @@
-[gd_scene load_steps=160 format=2]
+[gd_scene load_steps=159 format=2]
 
-[ext_resource path="res://personajeMesa-de-trabajo-2.png" type="Texture" id=1]
+[ext_resource path="res://Mesa de trabajo 2.png" type="Texture" id=1]
 [ext_resource path="res://Glass.gd" type="Script" id=2]
 [ext_resource path="res://techo.png" type="Texture" id=3]
 [ext_resource path="res://escenario.png" type="Texture" id=4]
-[ext_resource path="res://personajeMesa-de-trabajo-1.png" type="Texture" id=5]
-[ext_resource path="res://personajeMesa-de-trabajo-3.png" type="Texture" id=6]
-[ext_resource path="res://personajeMesa-de-trabajo-4.png" type="Texture" id=7]
-[ext_resource path="res://personajeMesa-de-trabajo-5.png" type="Texture" id=8]
-[ext_resource path="res://Jump5.png" type="Texture" id=9]
-[ext_resource path="res://Jump4.png" type="Texture" id=10]
-[ext_resource path="res://Jump6.png" type="Texture" id=11]
-[ext_resource path="res://Jump3.png" type="Texture" id=12]
-[ext_resource path="res://Jump2.png" type="Texture" id=13]
+[ext_resource path="res://Mesa de trabajo 1.png" type="Texture" id=5]
+[ext_resource path="res://Mesa de trabajo 3.png" type="Texture" id=6]
+[ext_resource path="res://Mesa de trabajo 4.png" type="Texture" id=7]
+[ext_resource path="res://Mesa de trabajo 5.png" type="Texture" id=8]
+[ext_resource path="res://Mesa de trabajo 8.png" type="Texture" id=9]
+[ext_resource path="res://Mesa de trabajo 9.png" type="Texture" id=10]
+[ext_resource path="res://Mesa de trabajo 8 copia.png" type="Texture" id=11]
+[ext_resource path="res://Mesa de trabajo 10.png" type="Texture" id=12]
 [ext_resource path="res://camino con huecos grandes.png" type="Texture" id=14]
 [ext_resource path="res://tabla de lado.png" type="Texture" id=15]
 [ext_resource path="res://boss_animacion1/boss_estatico_00022.png" type="Texture" id=16]
@@ -108,8 +107,8 @@
 [ext_resource path="res://Boss.gd" type="Script" id=106]
 [ext_resource path="res://Camera2D.gd" type="Script" id=107]
 [ext_resource path="res://Golpe.wav" type="AudioStream" id=108]
-[ext_resource path="res://personajeMesa-de-trabajo-6.png" type="Texture" id=109]
-[ext_resource path="res://personajeMesa-de-trabajo-7.png" type="Texture" id=110]
+[ext_resource path="res://Mesa de trabajo 6.png" type="Texture" id=109]
+[ext_resource path="res://Mesa de trabajo 7.png" type="Texture" id=110]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 42.8368, 409.085 )
@@ -815,7 +814,7 @@ extents = Vector2( 142.941, 286.571 )
 
 [sub_resource type="SpriteFrames" id=46]
 animations = [ {
-"frames": [ ExtResource( 13 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 9 ) ],
+"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 12 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "saltar",
 "speed": 5.0

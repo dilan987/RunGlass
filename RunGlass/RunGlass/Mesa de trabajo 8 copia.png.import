@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Mesa de trabajo 8 copia.png-c06c776c22dec430fcef6a6fdf205fc2.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Mesa de trabajo 8 copia.png"
+dest_files=[ "res://.import/Mesa de trabajo 8 copia.png-c06c776c22dec430fcef6a6fdf205fc2.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

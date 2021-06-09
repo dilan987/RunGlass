@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/personajeMesa-de-trabajo-6.png-4f7e0be6b79d98d7f5457bbc24d6ba78.stex"
+path="res://.import/Mesa de trabajo 9.png-c4fb6f0d853caaef0592cf260df7e0c0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://personajeMesa-de-trabajo-6.png"
-dest_files=[ "res://.import/personajeMesa-de-trabajo-6.png-4f7e0be6b79d98d7f5457bbc24d6ba78.stex" ]
+source_file="res://Mesa de trabajo 9.png"
+dest_files=[ "res://.import/Mesa de trabajo 9.png-c4fb6f0d853caaef0592cf260df7e0c0.stex" ]
 
 [params]
 
