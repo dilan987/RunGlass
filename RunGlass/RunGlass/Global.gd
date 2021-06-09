@@ -19,6 +19,7 @@ func Change_Jump_Force(character: KinematicBody2D, new_Jforce: float, time:float
 	
 	yield(get_tree().create_timer(time), "timeout")
 	
-	if last_Jforce == null:
+	if last_Jforce == null || character.JumpForce == null:
 		last_Jforce = -450
+		character.JumpForce = -450
 	character.JumpForce = last_Jforce
