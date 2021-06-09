@@ -5,6 +5,6 @@
 [node name="CanvasLayer" type="CanvasLayer"]
 
 [node name="monedas" type="Sprite" parent="."]
-position = Vector2( 491.776, 33.8541 )
+position = Vector2( 299, 29 )
 scale = Vector2( 0.0587251, 0.0587251 )
 texture = ExtResource( 1 )
