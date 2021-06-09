@@ -1835,9 +1835,15 @@ script = ExtResource( 2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Glass" groups=[
 "heroe",
 ]]
+<<<<<<< Updated upstream
 position = Vector2( -5, 0 )
 scale = Vector2( 1.16539, 1.16539 )
 frames = SubResource( 51 )
+=======
+position = Vector2( 29.5107, 94.3873 )
+scale = Vector2( 0.87043, 0.87043 )
+frames = SubResource( 46 )
+>>>>>>> Stashed changes
 animation = "moverse"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Glass" groups=[

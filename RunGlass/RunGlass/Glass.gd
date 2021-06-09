@@ -30,7 +30,7 @@ func _process(delta):
 	if Input.is_action_pressed("ui_up") and is_on_floor():
 		get_tree().get_nodes_in_group("sfx")[0].get_node("1").play()
 		direccion.y= JumpForce
-		animacion.play("saltar")
+		
 			
 		
 	if not is_on_floor():
