@@ -1486,7 +1486,7 @@ shape = SubResource( 12 )
 [node name="spawn" type="Position2D" parent="." groups=[
 "spawn",
 ]]
-position = Vector2( 172.23, 596.06 )
+position = Vector2( 173.565, 565.359 )
 
 [node name="GUI" type="CanvasLayer" parent="." groups=[
 "gui",
@@ -1933,22 +1933,22 @@ shape = SubResource( 45 )
 [node name="Glass" type="KinematicBody2D" parent="." groups=[
 "heroe",
 ]]
-position = Vector2( 159.293, 589.115 )
+position = Vector2( 160.628, 558.414 )
 scale = Vector2( 0.2, 0.2 )
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Glass" groups=[
 "heroe",
 ]]
-position = Vector2( -5, 0 )
-scale = Vector2( 1.16539, 1.16539 )
+position = Vector2( 24.5732, 130.147 )
+scale = Vector2( 0.895989, 0.895989 )
 frames = SubResource( 46 )
 animation = "moverse"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Glass" groups=[
 "heroe",
 ]]
-playback_speed = 11.0
+playback_speed = 9.0
 anims/correr = SubResource( 47 )
 anims/saltar = SubResource( 48 )
 
@@ -1976,7 +1976,7 @@ autoplay = true
 [node name="CanvasLayer2" parent="." instance=ExtResource( 40 )]
 
 [node name="Pocion Verde" parent="." instance=ExtResource( 41 )]
-position = Vector2( 1604.59, 392.652 )
+position = Vector2( 4651.42, -5.66296 )
 scale = Vector2( 0.4, 0.4 )
 
 [node name="Kevin" parent="." instance=ExtResource( 44 )]
