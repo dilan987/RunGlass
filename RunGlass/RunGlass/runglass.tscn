@@ -810,10 +810,10 @@ radius = 71.6094
 radius = 83.8701
 height = 139.251
 
-[sub_resource type="RectangleShape2D" id=45]
+[sub_resource type="RectangleShape2D" id=50]
 extents = Vector2( 142.941, 286.571 )
 
-[sub_resource type="SpriteFrames" id=46]
+[sub_resource type="SpriteFrames" id=51]
 animations = [ {
 "frames": [ ExtResource( 13 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 9 ) ],
 "loop": true,
@@ -826,7 +826,7 @@ animations = [ {
 "speed": 9.0
 } ]
 
-[sub_resource type="Animation" id=47]
+[sub_resource type="Animation" id=52]
 length = 5.0
 loop = true
 tracks/0/type = "value"
@@ -842,7 +842,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 0 ]
 }
 
-[sub_resource type="Animation" id=48]
+[sub_resource type="Animation" id=53]
 length = 6.0
 loop = true
 tracks/0/type = "value"
@@ -1822,8 +1822,8 @@ one_shot = true
 [node name="PlayerEntry" type="Area2D" parent="Boss"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss/PlayerEntry"]
-position = Vector2( -1388.93, -77.9119 )
-shape = SubResource( 45 )
+position = Vector2( -519.912, -79.4102 )
+shape = SubResource( 50 )
 
 [node name="Glass" type="KinematicBody2D" parent="." groups=[
 "heroe",
@@ -1837,15 +1837,21 @@ script = ExtResource( 2 )
 ]]
 position = Vector2( -5, 0 )
 scale = Vector2( 1.16539, 1.16539 )
-frames = SubResource( 46 )
+frames = SubResource( 51 )
 animation = "moverse"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Glass" groups=[
 "heroe",
 ]]
+<<<<<<< Updated upstream
 playback_speed = 11.0
 anims/correr = SubResource( 47 )
 anims/saltar = SubResource( 48 )
+=======
+playback_speed = 9.0
+anims/correr = SubResource( 52 )
+anims/saltar = SubResource( 53 )
+>>>>>>> Stashed changes
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Glass" groups=[
 "heroe",
@@ -1943,6 +1949,9 @@ stream = ExtResource( 108 )
 [connection signal="body_entered" from="moneda2" to="moneda2" method="_on_moneda_body_entered"]
 [connection signal="coin_collected" from="moneda2" to="." method="_on_moneda_coin_collected"]
 [connection signal="Attack1" from="Boss" to="Glass/Camera2D" method="_on_Boss_Attack1"]
+[connection signal="Stop_attack" from="Boss" to="Glass/Camera2D" method="_on_Boss_Stop_attack"]
 [connection signal="area_entered" from="Boss/BulletD" to="Boss" method="_on_BulletD_area_entered"]
 [connection signal="body_entered" from="Boss/PlayerEntry" to="Boss" method="_on_PlayerEntry_body_entered"]
 [connection signal="Life" from="Glass" to="." method="_on_Glass_Life"]
+[connection signal="PlayerTD" from="Glass/Camera2D" to="Glass" method="_on_Camera2D_PlayerTD"]
+[connection signal="Stop_PlTD" from="Glass/Camera2D" to="Glass" method="_on_Camera2D_Stop_PlTD"]

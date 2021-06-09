@@ -12,6 +12,9 @@ enum {
 }
 
 signal Attack1
+signal Stop_attack
+var Time_attack = 2
+var Time_Charge = 0
 var state = WAIT
 var player_entry = false
 var Player = null
@@ -32,18 +35,16 @@ func _process(delta):
 			else:
 				state = WAIT
 		IDLE:
-			animacion.play("estaticos_boss")
-			$Timer.start()
-			print("Se inicio timer")
-			if $Timer.wait_time <= 0:
-				state = ATTACK1
+			yield(get_tree().create_timer(3), "timeout")
+			Time_Charge = 0.7
+			state = ATTACK1
 		ATTACK1:
 			print("ataque1")
-#			$Timer.wait_time == 5
-#			$Timer.start()
-			emit_signal("Attack1")
-#			if $Timer.wait_time <= 0:
-#				state = IDLE
+			if Time_Charge < Time_attack:
+				emit_signal("Attack1")
+				Time_Charge += delta
+			else:
+				emit_signal("Stop_attack")
 		HURT:
 			if Bullet != null:
 #				$AnimatedSprite/AnimationPlayer.play("Hurt")
@@ -63,8 +64,8 @@ func Take_Damage(Amount):
 		print("Health =", 0)
 
 func _on_PlayerEntry_body_entered(body):
-	if is_in_group("heroe"):
-		player_entry == true
+	if body.is_in_group("heroe"):
+		player_entry = true
 
 
 func _on_BulletD_area_entered(area):
