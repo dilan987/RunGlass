@@ -1,4 +1,4 @@
-[gd_scene load_steps=157 format=2]
+[gd_scene load_steps=158 format=2]
 
 [ext_resource path="res://Run3.png" type="Texture" id=1]
 [ext_resource path="res://Glass.gd" type="Script" id=2]
@@ -107,6 +107,7 @@
 [ext_resource path="res://boss_animacion1/boss_estatico_00057.png" type="Texture" id=105]
 [ext_resource path="res://Boss.gd" type="Script" id=106]
 [ext_resource path="res://Camera2D.gd" type="Script" id=107]
+[ext_resource path="res://Golpe.wav" type="AudioStream" id=108]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 42.8368, 409.085 )
@@ -125,14 +126,14 @@ extents = Vector2( 180.202, 14.7357 )
 
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
-"frames": [ ExtResource( 33 ), ExtResource( 34 ), ExtResource( 37 ), ExtResource( 33 ) ],
-"loop": true,
-"name": "Attack",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 32 ), ExtResource( 36 ), ExtResource( 38 ), ExtResource( 35 ) ],
 "loop": true,
 "name": "Walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 33 ), ExtResource( 34 ), ExtResource( 37 ), ExtResource( 33 ) ],
+"loop": true,
+"name": "Attack",
 "speed": 5.0
 } ]
 
@@ -807,10 +808,10 @@ radius = 71.6094
 radius = 83.8701
 height = 139.251
 
-[sub_resource type="RectangleShape2D" id=49]
+[sub_resource type="RectangleShape2D" id=45]
 extents = Vector2( 142.941, 286.571 )
 
-[sub_resource type="SpriteFrames" id=45]
+[sub_resource type="SpriteFrames" id=46]
 animations = [ {
 "frames": [ ExtResource( 13 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 9 ) ],
 "loop": true,
@@ -823,7 +824,7 @@ animations = [ {
 "speed": 9.0
 } ]
 
-[sub_resource type="Animation" id=46]
+[sub_resource type="Animation" id=47]
 length = 5.0
 loop = true
 tracks/0/type = "value"
@@ -839,7 +840,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 0 ]
 }
 
-[sub_resource type="Animation" id=47]
+[sub_resource type="Animation" id=48]
 length = 6.0
 loop = true
 tracks/0/type = "value"
@@ -855,7 +856,7 @@ tracks/0/keys = {
 "values": [ 1, 2, 3, 4, 0 ]
 }
 
-[sub_resource type="RectangleShape2D" id=48]
+[sub_resource type="RectangleShape2D" id=49]
 extents = Vector2( 140.932, 264.277 )
 
 [node name="main" type="Node2D"]
@@ -1820,7 +1821,7 @@ one_shot = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss/PlayerEntry"]
 position = Vector2( -1388.93, -77.9119 )
-shape = SubResource( 49 )
+shape = SubResource( 45 )
 
 [node name="Glass" type="KinematicBody2D" parent="." groups=[
 "heroe",
@@ -1834,21 +1835,21 @@ script = ExtResource( 2 )
 ]]
 position = Vector2( -5, 0 )
 scale = Vector2( 1.16539, 1.16539 )
-frames = SubResource( 45 )
+frames = SubResource( 46 )
 animation = "moverse"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Glass" groups=[
 "heroe",
 ]]
 playback_speed = 9.0
-anims/correr = SubResource( 46 )
-anims/saltar = SubResource( 47 )
+anims/correr = SubResource( 47 )
+anims/saltar = SubResource( 48 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Glass" groups=[
 "heroe",
 ]]
 position = Vector2( 1, 81 )
-shape = SubResource( 48 )
+shape = SubResource( 49 )
 
 [node name="Camera2D" type="Camera2D" parent="Glass" groups=[
 "heroe",
@@ -1885,6 +1886,9 @@ volume_db = 6.118
 [node name="2" type="AudioStreamPlayer" parent="Node"]
 stream = ExtResource( 46 )
 volume_db = 2.447
+
+[node name="3" type="AudioStreamPlayer" parent="Node"]
+stream = ExtResource( 108 )
 
 [connection signal="area_entered" from="enemigo/Area2DB" to="enemigo" method="_on_Area2DB_area_entered"]
 [connection signal="body_entered" from="enemigo/Area2DPl" to="enemigo" method="_on_Area2DPl_body_entered"]

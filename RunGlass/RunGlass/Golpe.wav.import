@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Golpe.wav-5d2a26ee073d59026a4cc70c7a6e55a2.sample"
+
+[deps]
+
+source_file="res://Golpe.wav"
+dest_files=[ "res://.import/Golpe.wav-5d2a26ee073d59026a4cc70c7a6e55a2.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

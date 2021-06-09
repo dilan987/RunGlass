@@ -17,6 +17,7 @@ func _ready():
 
 func _physics_process(delta):
 	if $AnimatedSprite/AnimationPlayer.current_animation == "Attack":
+		get_tree().get_nodes_in_group("sfx")[0].get_node("3").play()
 		return
 	
 	if is_dead == false:
