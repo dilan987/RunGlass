@@ -8,7 +8,6 @@ var direccion_arriba = Vector2(0,-1)
 var Life = 3
 onready var sprite = $AnimatedSprite
 onready var animacion = $AnimationPlayer
-var TakeD = false
 
 signal Life
 
@@ -30,7 +29,7 @@ func _process(delta):
 	if Input.is_action_pressed("ui_up") and is_on_floor():
 		get_tree().get_nodes_in_group("sfx")[0].get_node("1").play()
 		direccion.y= JumpForce
-		
+		animacion.play("saltar")
 			
 		
 	if not is_on_floor():
@@ -43,17 +42,11 @@ func _process(delta):
 #			get_tree().get_nodes_in_group("heroe")[0].respawn()
 			#emit_signal("Life", Life)
 			print(Life)
-			yield(get_tree().create_timer(5), "timeout")
+			yield(get_tree().create_timer(1), "timeout")
 		if(colisionador.is_in_group("objetos-malos")):
 #			Life *= -1
 			get_tree().get_nodes_in_group("heroe")[0].respawn()
 			emit_signal("Life", Life)
-			
-		if TakeD == true and is_on_floor():
-			Lose_Life(1)
-			yield(get_tree().create_timer(5), "timeout")
-		else:
-			Life = Life
 
 #	if Life == 0:
 #		get_tree().get_nodes_in_group("heroe")[0].respawn()
@@ -68,11 +61,3 @@ func Lose_Life(Dano):
 	else:
 		Life =  Life - Dano
 		emit_signal("Life", Life)
-
-
-func _on_Camera2D_PlayerTD():
-	TakeD = true
-
-
-func _on_Camera2D_Stop_PlTD():
-	TakeD = false

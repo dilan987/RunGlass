@@ -1,12 +1,11 @@
 extends Camera2D
 
-var shake_power = 20
+signal Attack1;
+var shake_power = 4
 var isShake = false
 var shake_time = 0.4
 var elapsedtime = 0
 var curPos
-signal PlayerTD
-signal Stop_PlTD
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -17,24 +16,17 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if isShake == true:
-		shake(delta)
-		elapsedtime = 0
-		shake(delta)
-		emit_signal("PlayerTD") 
-	else:
-		offset = curPos
-		emit_signal("Stop_PlTD")    
+		shake(delta)  
 
 func shake(delta):
 	if elapsedtime<shake_time:
 		offset =  Vector2(randf(), randf()) * shake_power
 		elapsedtime += delta
 	else:
-		offset = curPos
-		emit_signal("Stop_PlTD")      
+		isShake = false
+		elapsedtime = 0
+		offset = curPos     
 
 func _on_Boss_Attack1():
 	isShake = true
-
-func _on_Boss_Stop_attack():
-	isShake = false
+	emit_signal("Attack1")
