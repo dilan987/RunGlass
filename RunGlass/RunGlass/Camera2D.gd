@@ -1,5 +1,6 @@
 extends Camera2D
 
+signal Attack1;
 var shake_power = 4
 var isShake = false
 var shake_time = 0.4
@@ -28,3 +29,4 @@ func shake(delta):
 
 func _on_Boss_Attack1():
 	isShake = true
+	emit_signal("Attack1")
