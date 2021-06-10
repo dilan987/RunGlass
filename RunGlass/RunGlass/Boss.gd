@@ -24,7 +24,8 @@ var Health = 200
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	animacion.play("estaticos_boss")
+	pass
+#	animacion.play("estaticos_boss")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -39,6 +40,7 @@ func _process(delta):
 			else:
 				state = WAIT
 		IDLE:
+			animacion.play("estaticos_boss")
 			$AttackPlayer.monitoring = false
 			$AttackPlayer/CollisionShape2D.disabled = true
 			yield(get_tree().create_timer(3), "timeout")
@@ -47,6 +49,7 @@ func _process(delta):
 		ATTACK1:
 			print("ataque1")
 			if Time_Charge < Time_attack:
+				animacion.play("ataque_boss")
 				emit_signal("Attack1")
 				$AttackPlayer.monitoring = true
 				$AttackPlayer/CollisionShape2D.disabled = false
