@@ -47,6 +47,9 @@ func _process(delta):
 #			Life *= -1
 			get_tree().get_nodes_in_group("heroe")[0].respawn()
 			emit_signal("Life", Life)
+			
+	if Life <= 0:
+		get_tree().reload_current_scene() 
 
 #	if Life == 0:
 #		get_tree().get_nodes_in_group("heroe")[0].respawn()
