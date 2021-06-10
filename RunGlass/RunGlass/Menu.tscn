@@ -72,7 +72,6 @@ margin_top = 6.0
 margin_right = 2038.0
 margin_bottom = 1006.0
 texture_normal = SubResource( 2 )
-
 [connection signal="pressed" from="VBoxContainer/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/play" to="." method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="VBoxContainer2/salir" to="." method="_on_salir_pressed"]

@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Glass_caminando_00068.png-24c2057cbf8096602e04953e9a0b286f.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://glass-correr/Glass_caminando_00068.png"
+dest_files=[ "res://.import/Glass_caminando_00068.png-24c2057cbf8096602e04953e9a0b286f.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
