@@ -1949,7 +1949,6 @@ script = ExtResource( 106 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Boss"]
 scale = Vector2( 0.52123, 0.52123 )
 frames = SubResource( 41 )
-animation = "muerte_boss"
 frame = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Boss/AnimatedSprite"]
@@ -2004,6 +2003,7 @@ position = Vector2( 24.5732, 130.147 )
 scale = Vector2( 0.895989, 0.895989 )
 frames = SubResource( 49 )
 animation = "moverse"
+frame = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Glass" groups=[
 "heroe",
@@ -2036,7 +2036,7 @@ autoplay = true
 [node name="CanvasLayer2" parent="." instance=ExtResource( 40 )]
 
 [node name="Pocion Verde" parent="." instance=ExtResource( 41 )]
-position = Vector2( 4651.42, -5.66296 )
+position = Vector2( 3735.73, 391.532 )
 scale = Vector2( 0.4, 0.4 )
 
 [node name="Kevin" parent="." instance=ExtResource( 44 )]

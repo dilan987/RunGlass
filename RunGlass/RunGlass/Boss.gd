@@ -19,7 +19,7 @@ var state = WAIT
 var player_entry = false
 var Player = null
 var Bullet = null
-var Health = 200
+var Health = 10
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
