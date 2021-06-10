@@ -19,7 +19,7 @@ var state = WAIT
 var player_entry = false
 var Player = null
 var Bullet = null
-var Health = 10
+var Health = 100
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -66,7 +66,7 @@ func Take_Damage(Amount):
 	if Health <= 0:
 		$Timer.start()
 		$BulletD/CollisionCabeza.call_deferred("set_disabled", true)
-#		$AnimatedSprite/AnimationPlayer.play("muerte_boss")
+		$AnimatedSprite/AnimationPlayer.play("muerte_boss")
 		if $Timer.wait_time <= 0:
 				queue_free()
 				$CollisionCuerpo.call_deferred("set_disabled", true)
@@ -94,7 +94,7 @@ func _on_BulletD_area_entered(area):
 		Bullet = area
 		var Amount = 5
 		Take_Damage(Amount)
-		print_debug("Health =", 0)	
+		print_debug("Health =", Health)
 		state = HURT
 
 
@@ -112,3 +112,7 @@ func _on_AttackPlayer_body_exited(body):
 func RebootTimer():
 	yield(get_tree().create_timer(6), "timeout")
 	Time_Charge = 0
+
+
+func _on_Timer_timeout():
+	queue_free()

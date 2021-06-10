@@ -1,4 +1,4 @@
-[gd_scene load_steps=237 format=2]
+[gd_scene load_steps=247 format=2]
 
 [ext_resource path="res://Mesa de trabajo 2.png" type="Texture" id=1]
 [ext_resource path="res://Glass.gd" type="Script" id=2]
@@ -184,6 +184,16 @@
 [ext_resource path="res://ataque boss/boss-ataque_00064.png" type="Texture" id=182]
 [ext_resource path="res://ataque boss/boss-ataque_00067.png" type="Texture" id=183]
 [ext_resource path="res://ataque boss/boss-ataque_00066.png" type="Texture" id=184]
+[ext_resource path="res://Boss_muerte_anim/boss_K.O_00050.png" type="Texture" id=185]
+[ext_resource path="res://Boss_muerte_anim/boss_K.O_00054.png" type="Texture" id=186]
+[ext_resource path="res://Boss_muerte_anim/boss_K.O_00055.png" type="Texture" id=187]
+[ext_resource path="res://Boss_muerte_anim/boss_K.O_00057.png" type="Texture" id=188]
+[ext_resource path="res://Boss_muerte_anim/boss_K.O_00058.png" type="Texture" id=189]
+[ext_resource path="res://Boss_muerte_anim/boss_K.O_00053.png" type="Texture" id=190]
+[ext_resource path="res://Boss_muerte_anim/boss_K.O_00051.png" type="Texture" id=191]
+[ext_resource path="res://Boss_muerte_anim/boss_K.O_00059.png" type="Texture" id=192]
+[ext_resource path="res://Boss_muerte_anim/boss_K.O_00056.png" type="Texture" id=193]
+[ext_resource path="res://Boss_muerte_anim/boss_K.O_00052.png" type="Texture" id=194]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 42.8368, 409.085 )
@@ -863,6 +873,11 @@ animations = [ {
 "loop": true,
 "name": "estaticos_boss",
 "speed": 15.0
+}, {
+"frames": [ ExtResource( 185 ), ExtResource( 191 ), ExtResource( 194 ), ExtResource( 190 ), ExtResource( 186 ), ExtResource( 187 ), ExtResource( 193 ), ExtResource( 188 ), ExtResource( 189 ), ExtResource( 192 ) ],
+"loop": true,
+"name": "muerte_boss",
+"speed": 5.0
 } ]
 
 [sub_resource type="Animation" id=42]
@@ -939,7 +954,6 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id=44]
 resource_name = "muerte_boss"
-length = 6.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:animation")
 tracks/0/interp = 1
@@ -951,6 +965,18 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ "muerte_boss" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
 }
 
 [sub_resource type="CapsuleShape2D" id=45]
@@ -1946,27 +1972,35 @@ shape = SubResource( 40 )
 position = Vector2( 9272.76, 443.903 )
 script = ExtResource( 106 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Boss"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Boss" groups=[
+"enemigos",
+]]
 scale = Vector2( 0.52123, 0.52123 )
 frames = SubResource( 41 )
+animation = "muerte_boss"
 frame = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Boss/AnimatedSprite"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Boss/AnimatedSprite" groups=[
+"enemigos",
+]]
 playback_speed = 9.0
 anims/ataque_boss = SubResource( 42 )
 anims/estaticos_boss = SubResource( 43 )
 anims/muerte_boss = SubResource( 44 )
 
-[node name="BulletD" type="Area2D" parent="Boss"]
-visible = false
+[node name="BulletD" type="Area2D" parent="Boss" groups=[
+"enemigos",
+]]
 
-[node name="CollisionCabeza" type="CollisionShape2D" parent="Boss/BulletD"]
-visible = false
+[node name="CollisionCabeza" type="CollisionShape2D" parent="Boss/BulletD" groups=[
+"enemigos",
+]]
 position = Vector2( -109.376, -68.9221 )
 shape = SubResource( 45 )
 
-[node name="CollisionCuerpo" type="CollisionShape2D" parent="Boss"]
-visible = false
+[node name="CollisionCuerpo" type="CollisionShape2D" parent="Boss" groups=[
+"enemigos",
+]]
 position = Vector2( 65.9258, 65.9253 )
 rotation = -0.6353
 shape = SubResource( 46 )
@@ -2110,6 +2144,7 @@ stream = ExtResource( 108 )
 [connection signal="Attack1" from="Boss" to="Glass/Camera2D" method="_on_Boss_Attack1"]
 [connection signal="Stop_attack" from="Boss" to="Glass/Camera2D" method="_on_Boss_Stop_attack"]
 [connection signal="area_entered" from="Boss/BulletD" to="Boss" method="_on_BulletD_area_entered"]
+[connection signal="timeout" from="Boss/Timer" to="Boss" method="_on_Timer_timeout"]
 [connection signal="body_entered" from="Boss/PlayerEntry" to="Boss" method="_on_PlayerEntry_body_entered"]
 [connection signal="body_entered" from="Boss/AttackPlayer" to="Boss" method="_on_AttackPlayer_body_entered"]
 [connection signal="body_exited" from="Boss/AttackPlayer" to="Boss" method="_on_AttackPlayer_body_exited"]
